@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/IssuerCreateAndStoreCredentialDefResult', 'model/ProverCreateCredentialRequestResult'], factory);
+    define(['ApiClient', 'model/CredentialDefinition', 'model/ProverCreateCredentialRequestResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./IssuerCreateAndStoreCredentialDefResult'), require('./ProverCreateCredentialRequestResult'));
+    module.exports = factory(require('../ApiClient'), require('./CredentialDefinition'), require('./ProverCreateCredentialRequestResult'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.CredentialRequest = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.IssuerCreateAndStoreCredentialDefResult, root.ApiDocumentation.ProverCreateCredentialRequestResult);
+    root.ApiDocumentation.CredentialRequest = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.CredentialDefinition, root.ApiDocumentation.ProverCreateCredentialRequestResult);
   }
-}(this, function(ApiClient, IssuerCreateAndStoreCredentialDefResult, ProverCreateCredentialRequestResult) {
+}(this, function(ApiClient, CredentialDefinition, ProverCreateCredentialRequestResult) {
   'use strict';
 
   /**
@@ -59,7 +59,7 @@
       if (data.hasOwnProperty('credRequest'))
         obj.credRequest = ProverCreateCredentialRequestResult.constructFromObject(data['credRequest']);
       if (data.hasOwnProperty('credentials'))
-        obj.credentials = IssuerCreateAndStoreCredentialDefResult.constructFromObject(data['credentials']);
+        obj.credentials = CredentialDefinition.constructFromObject(data['credentials']);
       if (data.hasOwnProperty('masterSecretId'))
         obj.masterSecretId = ApiClient.convertToType(data['masterSecretId'], 'String');
     }
@@ -77,7 +77,7 @@
   exports.prototype.credRequest = undefined;
 
   /**
-   * @member {module:model/IssuerCreateAndStoreCredentialDefResult} credentials
+   * @member {module:model/CredentialDefinition} credentials
    */
   exports.prototype.credentials = undefined;
 

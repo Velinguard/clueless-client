@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Wallet'], factory);
+    define(['ApiClient', 'model/Person', 'model/Wallet'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Wallet'));
+    module.exports = factory(require('../ApiClient'), require('../model/Person'), require('../model/Wallet'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.WalletControllerApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Wallet);
+    root.ApiDocumentation.WalletControllerApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.Person, root.ApiDocumentation.Wallet);
   }
-}(this, function(ApiClient, Wallet) {
+}(this, function(ApiClient, Person, Wallet) {
   'use strict';
 
   /**
@@ -221,6 +221,56 @@
 
       return this.apiClient.callApi(
         '/get-wallet', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the loginUsingGET operation.
+     * @callback module:api/WalletControllerApi~loginUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Person} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * login
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.did did
+     * @param {String} opts.id id
+     * @param {String} opts.key key
+     * @param {String} opts.masterDid masterDid
+     * @param {module:api/WalletControllerApi~loginUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Person}
+     */
+    this.loginUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'did': opts['did'],
+        'id': opts['id'],
+        'key': opts['key'],
+        'masterDid': opts['masterDid'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['*/*'];
+      var returnType = Person;
+
+      return this.apiClient.callApi(
+        '/login', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

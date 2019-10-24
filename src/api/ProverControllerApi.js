@@ -48,68 +48,6 @@
 
 
     /**
-     * Callback function to receive the result of the proverGetCredentialsUsingGET operation.
-     * @callback module:api/ProverControllerApi~proverGetCredentialsUsingGETCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * proverGetCredentials
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.credOffer 
-     * @param {String} opts.credRequestCredentialRequestJson 
-     * @param {String} opts.credRequestCredentialRequestMetadataJson 
-     * @param {String} opts.credentialJson 
-     * @param {String} opts.credentialsCredDefId 
-     * @param {String} opts.credentialsCredDefJson 
-     * @param {String} opts.masterSecretId 
-     * @param {String} opts.revocId 
-     * @param {String} opts.revocRegDeltaJson 
-     * @param {Number} opts.walletHandle 
-     * @param {module:api/ProverControllerApi~proverGetCredentialsUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
-     */
-    this.proverGetCredentialsUsingGET = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'credOffer': opts['credOffer'],
-        'credRequest.credentialRequestJson': opts['credRequestCredentialRequestJson'],
-        'credRequest.credentialRequestMetadataJson': opts['credRequestCredentialRequestMetadataJson'],
-        'credentialJson': opts['credentialJson'],
-        'credentials.credDefId': opts['credentialsCredDefId'],
-        'credentials.credDefJson': opts['credentialsCredDefJson'],
-        'masterSecretId': opts['masterSecretId'],
-        'revocId': opts['revocId'],
-        'revocRegDeltaJson': opts['revocRegDeltaJson'],
-        'walletHandle': opts['walletHandle'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['*/*'];
-      var returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/credential', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the proverGetProofCredentialsUsingGET operation.
      * @callback module:api/ProverControllerApi~proverGetProofCredentialsUsingGETCallback
      * @param {String} error Error message, if any.
@@ -120,14 +58,14 @@
     /**
      * proverGetProofCredentials
      * @param {Object} opts Optional parameters
-     * @param {String} opts.credOffer 
-     * @param {String} opts.credRequestCredentialRequestJson 
-     * @param {String} opts.credRequestCredentialRequestMetadataJson 
-     * @param {String} opts.credentialsCredDefId 
-     * @param {String} opts.credentialsCredDefJson 
+     * @param {String} opts.credDefId 
+     * @param {String} opts.credDefJson 
+     * @param {String} opts.credDefs 
+     * @param {Number} opts.indyWalletWalletHandle 
      * @param {String} opts.masterSecretId 
+     * @param {String} opts.masterSecretId2 masterSecretId
+     * @param {String} opts.personDid 
      * @param {String} opts.proofRequestJson proofRequestJson
-     * @param {Number} opts.walletHandle 
      * @param {module:api/ProverControllerApi~proverGetProofCredentialsUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'String'}
      */
@@ -139,14 +77,14 @@
       var pathParams = {
       };
       var queryParams = {
-        'credOffer': opts['credOffer'],
-        'credRequest.credentialRequestJson': opts['credRequestCredentialRequestJson'],
-        'credRequest.credentialRequestMetadataJson': opts['credRequestCredentialRequestMetadataJson'],
-        'credentials.credDefId': opts['credentialsCredDefId'],
-        'credentials.credDefJson': opts['credentialsCredDefJson'],
+        'credDefId': opts['credDefId'],
+        'credDefJson': opts['credDefJson'],
+        'credDefs': opts['credDefs'],
+        'indyWallet.walletHandle': opts['indyWalletWalletHandle'],
         'masterSecretId': opts['masterSecretId'],
+        'masterSecretId': opts['masterSecretId2'],
+        'personDid': opts['personDid'],
         'proofRequestJson': opts['proofRequestJson'],
-        'walletHandle': opts['walletHandle'],
       };
       var collectionQueryParams = {
       };

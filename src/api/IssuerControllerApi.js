@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CredentialRequest', 'model/IssuerCreateCredentialResult'], factory);
+    define(['ApiClient', 'model/CredentialDefinition', 'model/CredentialRequest', 'model/IssuerCreateCredentialResult', 'model/Person'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CredentialRequest'), require('../model/IssuerCreateCredentialResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/CredentialDefinition'), require('../model/CredentialRequest'), require('../model/IssuerCreateCredentialResult'), require('../model/Person'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.IssuerControllerApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.CredentialRequest, root.ApiDocumentation.IssuerCreateCredentialResult);
+    root.ApiDocumentation.IssuerControllerApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.CredentialDefinition, root.ApiDocumentation.CredentialRequest, root.ApiDocumentation.IssuerCreateCredentialResult, root.ApiDocumentation.Person);
   }
-}(this, function(ApiClient, CredentialRequest, IssuerCreateCredentialResult) {
+}(this, function(ApiClient, CredentialDefinition, CredentialRequest, IssuerCreateCredentialResult, Person) {
   'use strict';
 
   /**
@@ -48,6 +48,54 @@
 
 
     /**
+     * Callback function to receive the result of the createCredentialDefinitionUsingPUT operation.
+     * @callback module:api/IssuerControllerApi~createCredentialDefinitionUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CredentialDefinition} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * createCredentialDefinition
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.indyWalletWalletHandle 
+     * @param {String} opts.masterSecretId 
+     * @param {String} opts.personDid 
+     * @param {module:api/IssuerControllerApi~createCredentialDefinitionUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CredentialDefinition}
+     */
+    this.createCredentialDefinitionUsingPUT = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'indyWallet.walletHandle': opts['indyWalletWalletHandle'],
+        'masterSecretId': opts['masterSecretId'],
+        'personDid': opts['personDid'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['*/*'];
+      var returnType = CredentialDefinition;
+
+      return this.apiClient.callApi(
+        '/create-credential-definition', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the createCredentialsUsingPUT operation.
      * @callback module:api/IssuerControllerApi~createCredentialsUsingPUTCallback
      * @param {String} error Error message, if any.
@@ -65,6 +113,7 @@
      * @param {String} opts.credRequestCredentialRequestMetadataJson 
      * @param {String} opts.credentialsCredDefId 
      * @param {String} opts.credentialsCredDefJson 
+     * @param {String} opts.credentialsCredDefs 
      * @param {Date} opts.dateOfBirth 
      * @param {Number} opts.licenceLevel 
      * @param {String} opts.masterSecretId 
@@ -88,6 +137,7 @@
         'credRequest.credentialRequestMetadataJson': opts['credRequestCredentialRequestMetadataJson'],
         'credentials.credDefId': opts['credentialsCredDefId'],
         'credentials.credDefJson': opts['credentialsCredDefJson'],
+        'credentials.credDefs': opts['credentialsCredDefs'],
         'dateOfBirth': opts['dateOfBirth'],
         'licenceLevel': opts['licenceLevel'],
         'masterSecretId': opts['masterSecretId'],
@@ -114,6 +164,46 @@
     }
 
     /**
+     * Callback function to receive the result of the getCredentialDefinitionUsingGET operation.
+     * @callback module:api/IssuerControllerApi~getCredentialDefinitionUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CredentialDefinition} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * getCredentialDefinition
+     * @param {module:api/IssuerControllerApi~getCredentialDefinitionUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CredentialDefinition}
+     */
+    this.getCredentialDefinitionUsingGET = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['*/*'];
+      var returnType = CredentialDefinition;
+
+      return this.apiClient.callApi(
+        '/get-credential-definition', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getProverCredentialUsingGET operation.
      * @callback module:api/IssuerControllerApi~getProverCredentialUsingGETCallback
      * @param {String} error Error message, if any.
@@ -124,12 +214,13 @@
     /**
      * getProverCredential
      * @param {Object} opts Optional parameters
-     * @param {String} opts.cluelessWalletWalletId 
-     * @param {String} opts.cluelessWalletWalletId2 
-     * @param {String} opts.cluelessWalletWalletKey 
-     * @param {String} opts.cluelessWalletWalletKey2 
+     * @param {String} opts.credDefId 
+     * @param {String} opts.credDefJson 
+     * @param {String} opts.credDefs 
      * @param {Number} opts.indyWalletWalletHandle 
      * @param {Number} opts.indyWalletWalletHandle2 
+     * @param {String} opts.masterSecretId 
+     * @param {String} opts.masterSecretId2 
      * @param {String} opts.personDid 
      * @param {String} opts.personDid2 
      * @param {module:api/IssuerControllerApi~getProverCredentialUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -143,12 +234,13 @@
       var pathParams = {
       };
       var queryParams = {
-        'cluelessWallet.walletId': opts['cluelessWalletWalletId'],
-        'cluelessWallet.walletId': opts['cluelessWalletWalletId2'],
-        'cluelessWallet.walletKey': opts['cluelessWalletWalletKey'],
-        'cluelessWallet.walletKey': opts['cluelessWalletWalletKey2'],
+        'credDefId': opts['credDefId'],
+        'credDefJson': opts['credDefJson'],
+        'credDefs': opts['credDefs'],
         'indyWallet.walletHandle': opts['indyWalletWalletHandle'],
         'indyWallet.walletHandle': opts['indyWalletWalletHandle2'],
+        'masterSecretId': opts['masterSecretId'],
+        'masterSecretId': opts['masterSecretId2'],
         'personDid': opts['personDid'],
         'personDid': opts['personDid2'],
       };
@@ -166,6 +258,66 @@
 
       return this.apiClient.callApi(
         '/get-prover-credentials', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the issuerCreateCredentialsUsingPUT operation.
+     * @callback module:api/IssuerControllerApi~issuerCreateCredentialsUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Person} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * issuerCreateCredentials
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.dateOfBirth dateOfBirth
+     * @param {Number} opts.indyWalletWalletHandle 
+     * @param {Number} opts.licenceLevel licenceLevel
+     * @param {String} opts.masterSecretId 
+     * @param {String} opts.name name
+     * @param {String} opts.personDid 
+     * @param {String} opts.proverDid proverDid
+     * @param {String} opts.proverWalletId proverWalletId
+     * @param {String} opts.proverWalletKey proverWalletKey
+     * @param {module:api/IssuerControllerApi~issuerCreateCredentialsUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Person}
+     */
+    this.issuerCreateCredentialsUsingPUT = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'dateOfBirth': opts['dateOfBirth'],
+        'indyWallet.walletHandle': opts['indyWalletWalletHandle'],
+        'licenceLevel': opts['licenceLevel'],
+        'masterSecretId': opts['masterSecretId'],
+        'name': opts['name'],
+        'personDid': opts['personDid'],
+        'proverDid': opts['proverDid'],
+        'proverWalletId': opts['proverWalletId'],
+        'proverWalletKey': opts['proverWalletKey'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['*/*'];
+      var returnType = Person;
+
+      return this.apiClient.callApi(
+        '/create', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

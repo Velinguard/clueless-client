@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CredentialRequest', 'model/IssuerCreateAndStoreCredentialDefResult', 'model/IssuerCreateCredentialResult', 'model/ModelAndView', 'model/ProverCreateCredentialRequestResult', 'model/View', 'model/Wallet', 'api/BasicErrorControllerApi', 'api/IssuerControllerApi', 'api/ProofControllerApi', 'api/ProverControllerApi', 'api/VerifierControllerApi', 'api/WalletControllerApi'], factory);
+    define(['ApiClient', 'model/CredentialDefinition', 'model/CredentialRequest', 'model/IssuerCreateCredentialResult', 'model/ModelAndView', 'model/Person', 'model/ProverCreateCredentialRequestResult', 'model/View', 'model/Wallet', 'api/BasicErrorControllerApi', 'api/IssuerControllerApi', 'api/ProofControllerApi', 'api/ProverControllerApi', 'api/VerifierControllerApi', 'api/WalletControllerApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/CredentialRequest'), require('./model/IssuerCreateAndStoreCredentialDefResult'), require('./model/IssuerCreateCredentialResult'), require('./model/ModelAndView'), require('./model/ProverCreateCredentialRequestResult'), require('./model/View'), require('./model/Wallet'), require('./api/BasicErrorControllerApi'), require('./api/IssuerControllerApi'), require('./api/ProofControllerApi'), require('./api/ProverControllerApi'), require('./api/VerifierControllerApi'), require('./api/WalletControllerApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/CredentialDefinition'), require('./model/CredentialRequest'), require('./model/IssuerCreateCredentialResult'), require('./model/ModelAndView'), require('./model/Person'), require('./model/ProverCreateCredentialRequestResult'), require('./model/View'), require('./model/Wallet'), require('./api/BasicErrorControllerApi'), require('./api/IssuerControllerApi'), require('./api/ProofControllerApi'), require('./api/ProverControllerApi'), require('./api/VerifierControllerApi'), require('./api/WalletControllerApi'));
   }
-}(function(ApiClient, CredentialRequest, IssuerCreateAndStoreCredentialDefResult, IssuerCreateCredentialResult, ModelAndView, ProverCreateCredentialRequestResult, View, Wallet, BasicErrorControllerApi, IssuerControllerApi, ProofControllerApi, ProverControllerApi, VerifierControllerApi, WalletControllerApi) {
+}(function(ApiClient, CredentialDefinition, CredentialRequest, IssuerCreateCredentialResult, ModelAndView, Person, ProverCreateCredentialRequestResult, View, Wallet, BasicErrorControllerApi, IssuerControllerApi, ProofControllerApi, ProverControllerApi, VerifierControllerApi, WalletControllerApi) {
   'use strict';
 
   /**
@@ -62,15 +62,15 @@
      */
     ApiClient: ApiClient,
     /**
+     * The CredentialDefinition model constructor.
+     * @property {module:model/CredentialDefinition}
+     */
+    CredentialDefinition: CredentialDefinition,
+    /**
      * The CredentialRequest model constructor.
      * @property {module:model/CredentialRequest}
      */
     CredentialRequest: CredentialRequest,
-    /**
-     * The IssuerCreateAndStoreCredentialDefResult model constructor.
-     * @property {module:model/IssuerCreateAndStoreCredentialDefResult}
-     */
-    IssuerCreateAndStoreCredentialDefResult: IssuerCreateAndStoreCredentialDefResult,
     /**
      * The IssuerCreateCredentialResult model constructor.
      * @property {module:model/IssuerCreateCredentialResult}
@@ -81,6 +81,11 @@
      * @property {module:model/ModelAndView}
      */
     ModelAndView: ModelAndView,
+    /**
+     * The Person model constructor.
+     * @property {module:model/Person}
+     */
+    Person: Person,
     /**
      * The ProverCreateCredentialRequestResult model constructor.
      * @property {module:model/ProverCreateCredentialRequestResult}

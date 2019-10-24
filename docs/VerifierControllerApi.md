@@ -20,12 +20,9 @@ var ApiDocumentation = require('api_documentation');
 var apiInstance = new ApiDocumentation.VerifierControllerApi();
 
 var opts = { 
-  'credOffer': "credOffer_example", // String | 
-  'credRequestCredentialRequestJson': "credRequestCredentialRequestJson_example", // String | 
-  'credRequestCredentialRequestMetadataJson': "credRequestCredentialRequestMetadataJson_example", // String | 
-  'credentialsCredDefId': "credentialsCredDefId_example", // String | 
-  'credentialsCredDefJson': "credentialsCredDefJson_example", // String | 
-  'masterSecretId': "masterSecretId_example", // String | 
+  'credDefId': "credDefId_example", // String | 
+  'credDefJson': "credDefJson_example", // String | 
+  'credDefs': "credDefs_example", // String | 
   'name': "name_example", // String | name
   'proofJson': "proofJson_example", // String | proofJson
   'proofRequestJson': "proofRequestJson_example" // String | proofRequestJson
@@ -45,12 +42,9 @@ apiInstance.verifyProofUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **credOffer** | **String**|  | [optional] 
- **credRequestCredentialRequestJson** | **String**|  | [optional] 
- **credRequestCredentialRequestMetadataJson** | **String**|  | [optional] 
- **credentialsCredDefId** | **String**|  | [optional] 
- **credentialsCredDefJson** | **String**|  | [optional] 
- **masterSecretId** | **String**|  | [optional] 
+ **credDefId** | **String**|  | [optional] 
+ **credDefJson** | **String**|  | [optional] 
+ **credDefs** | **String**|  | [optional] 
  **name** | **String**| name | [optional] 
  **proofJson** | **String**| proofJson | [optional] 
  **proofRequestJson** | **String**| proofRequestJson | [optional] 

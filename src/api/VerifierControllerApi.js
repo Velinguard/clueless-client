@@ -58,12 +58,9 @@
     /**
      * verifyProof
      * @param {Object} opts Optional parameters
-     * @param {String} opts.credOffer 
-     * @param {String} opts.credRequestCredentialRequestJson 
-     * @param {String} opts.credRequestCredentialRequestMetadataJson 
-     * @param {String} opts.credentialsCredDefId 
-     * @param {String} opts.credentialsCredDefJson 
-     * @param {String} opts.masterSecretId 
+     * @param {String} opts.credDefId 
+     * @param {String} opts.credDefJson 
+     * @param {String} opts.credDefs 
      * @param {String} opts.name name
      * @param {String} opts.proofJson proofJson
      * @param {String} opts.proofRequestJson proofRequestJson
@@ -78,12 +75,9 @@
       var pathParams = {
       };
       var queryParams = {
-        'credOffer': opts['credOffer'],
-        'credRequest.credentialRequestJson': opts['credRequestCredentialRequestJson'],
-        'credRequest.credentialRequestMetadataJson': opts['credRequestCredentialRequestMetadataJson'],
-        'credentials.credDefId': opts['credentialsCredDefId'],
-        'credentials.credDefJson': opts['credentialsCredDefJson'],
-        'masterSecretId': opts['masterSecretId'],
+        'credDefId': opts['credDefId'],
+        'credDefJson': opts['credDefJson'],
+        'credDefs': opts['credDefs'],
         'name': opts['name'],
         'proofJson': opts['proofJson'],
         'proofRequestJson': opts['proofRequestJson'],

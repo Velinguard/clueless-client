@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**createWalletUsingPUT**](WalletControllerApi.md#createWalletUsingPUT) | **PUT** /create-wallet | createWallet
 [**deleteWalletUsingDELETE**](WalletControllerApi.md#deleteWalletUsingDELETE) | **DELETE** /delete-wallet | deleteWallet
 [**getWalletUsingGET**](WalletControllerApi.md#getWalletUsingGET) | **GET** /get-wallet | getWallet
+[**loginUsingGET**](WalletControllerApi.md#loginUsingGET) | **GET** /login | login
 
 
 <a name="closeWalletUsingDELETE"></a>
@@ -186,6 +187,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Wallet**](Wallet.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+<a name="loginUsingGET"></a>
+# **loginUsingGET**
+> Person loginUsingGET(opts)
+
+login
+
+### Example
+```javascript
+var ApiDocumentation = require('api_documentation');
+
+var apiInstance = new ApiDocumentation.WalletControllerApi();
+
+var opts = { 
+  'did': "did_example", // String | did
+  'id': "id_example", // String | id
+  'key': "key_example", // String | key
+  'masterDid': "masterDid_example" // String | masterDid
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.loginUsingGET(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **did** | **String**| did | [optional] 
+ **id** | **String**| id | [optional] 
+ **key** | **String**| key | [optional] 
+ **masterDid** | **String**| masterDid | [optional] 
+
+### Return type
+
+[**Person**](Person.md)
 
 ### Authorization
 

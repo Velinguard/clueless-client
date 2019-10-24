@@ -121,24 +121,28 @@ Class | Method | HTTP request | Description
 *ApiDocumentation.BasicErrorControllerApi* | [**errorUsingPATCH**](docs/BasicErrorControllerApi.md#errorUsingPATCH) | **PATCH** /error | error
 *ApiDocumentation.BasicErrorControllerApi* | [**errorUsingPOST**](docs/BasicErrorControllerApi.md#errorUsingPOST) | **POST** /error | error
 *ApiDocumentation.BasicErrorControllerApi* | [**errorUsingPUT**](docs/BasicErrorControllerApi.md#errorUsingPUT) | **PUT** /error | error
+*ApiDocumentation.IssuerControllerApi* | [**createCredentialDefinitionUsingPUT**](docs/IssuerControllerApi.md#createCredentialDefinitionUsingPUT) | **PUT** /create-credential-definition | createCredentialDefinition
 *ApiDocumentation.IssuerControllerApi* | [**createCredentialsUsingPUT**](docs/IssuerControllerApi.md#createCredentialsUsingPUT) | **PUT** /create-credentials | createCredentials
+*ApiDocumentation.IssuerControllerApi* | [**getCredentialDefinitionUsingGET**](docs/IssuerControllerApi.md#getCredentialDefinitionUsingGET) | **GET** /get-credential-definition | getCredentialDefinition
 *ApiDocumentation.IssuerControllerApi* | [**getProverCredentialUsingGET**](docs/IssuerControllerApi.md#getProverCredentialUsingGET) | **GET** /get-prover-credentials | getProverCredential
+*ApiDocumentation.IssuerControllerApi* | [**issuerCreateCredentialsUsingPUT**](docs/IssuerControllerApi.md#issuerCreateCredentialsUsingPUT) | **PUT** /create | issuerCreateCredentials
 *ApiDocumentation.ProofControllerApi* | [**getProofRequestUsingGET**](docs/ProofControllerApi.md#getProofRequestUsingGET) | **GET** /get-proof-request | getProofRequest
-*ApiDocumentation.ProverControllerApi* | [**proverGetCredentialsUsingGET**](docs/ProverControllerApi.md#proverGetCredentialsUsingGET) | **GET** /credential | proverGetCredentials
 *ApiDocumentation.ProverControllerApi* | [**proverGetProofCredentialsUsingGET**](docs/ProverControllerApi.md#proverGetProofCredentialsUsingGET) | **GET** /credentials-for-proof | proverGetProofCredentials
 *ApiDocumentation.VerifierControllerApi* | [**verifyProofUsingGET**](docs/VerifierControllerApi.md#verifyProofUsingGET) | **GET** /prove | verifyProof
 *ApiDocumentation.WalletControllerApi* | [**closeWalletUsingDELETE**](docs/WalletControllerApi.md#closeWalletUsingDELETE) | **DELETE** /close-wallet | closeWallet
 *ApiDocumentation.WalletControllerApi* | [**createWalletUsingPUT**](docs/WalletControllerApi.md#createWalletUsingPUT) | **PUT** /create-wallet | createWallet
 *ApiDocumentation.WalletControllerApi* | [**deleteWalletUsingDELETE**](docs/WalletControllerApi.md#deleteWalletUsingDELETE) | **DELETE** /delete-wallet | deleteWallet
 *ApiDocumentation.WalletControllerApi* | [**getWalletUsingGET**](docs/WalletControllerApi.md#getWalletUsingGET) | **GET** /get-wallet | getWallet
+*ApiDocumentation.WalletControllerApi* | [**loginUsingGET**](docs/WalletControllerApi.md#loginUsingGET) | **GET** /login | login
 
 
 ## Documentation for Models
 
+ - [ApiDocumentation.CredentialDefinition](docs/CredentialDefinition.md)
  - [ApiDocumentation.CredentialRequest](docs/CredentialRequest.md)
- - [ApiDocumentation.IssuerCreateAndStoreCredentialDefResult](docs/IssuerCreateAndStoreCredentialDefResult.md)
  - [ApiDocumentation.IssuerCreateCredentialResult](docs/IssuerCreateCredentialResult.md)
  - [ApiDocumentation.ModelAndView](docs/ModelAndView.md)
+ - [ApiDocumentation.Person](docs/Person.md)
  - [ApiDocumentation.ProverCreateCredentialRequestResult](docs/ProverCreateCredentialRequestResult.md)
  - [ApiDocumentation.View](docs/View.md)
  - [ApiDocumentation.Wallet](docs/Wallet.md)
