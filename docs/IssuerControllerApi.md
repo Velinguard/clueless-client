@@ -5,9 +5,9 @@ All URIs are relative to *https://34.244.72.181:8080*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createCredentialDefinitionUsingPUT**](IssuerControllerApi.md#createCredentialDefinitionUsingPUT) | **PUT** /create-credential-definition | createCredentialDefinition
-[**createCredentialsUsingPUT**](IssuerControllerApi.md#createCredentialsUsingPUT) | **PUT** /create-credentials | createCredentials
+[**createCredentialsFromRequestUsingPUT**](IssuerControllerApi.md#createCredentialsFromRequestUsingPUT) | **PUT** /create-credentials | createCredentialsFromRequest
+[**generateProversCredentialRequestUsingGET**](IssuerControllerApi.md#generateProversCredentialRequestUsingGET) | **GET** /generate-provers-credential-request | generateProversCredentialRequest
 [**getCredentialDefinitionUsingGET**](IssuerControllerApi.md#getCredentialDefinitionUsingGET) | **GET** /get-credential-definition | getCredentialDefinition
-[**getProverCredentialUsingGET**](IssuerControllerApi.md#getProverCredentialUsingGET) | **GET** /get-prover-credentials | getProverCredential
 [**issuerCreateCredentialsUsingPUT**](IssuerControllerApi.md#issuerCreateCredentialsUsingPUT) | **PUT** /create | issuerCreateCredentials
 
 
@@ -60,11 +60,11 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: */*
 
-<a name="createCredentialsUsingPUT"></a>
-# **createCredentialsUsingPUT**
-> IssuerCreateCredentialResult createCredentialsUsingPUT(opts)
+<a name="createCredentialsFromRequestUsingPUT"></a>
+# **createCredentialsFromRequestUsingPUT**
+> IssuerCreateCredentialResult createCredentialsFromRequestUsingPUT(opts)
 
-createCredentials
+createCredentialsFromRequest
 
 ### Example
 ```javascript
@@ -95,7 +95,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.createCredentialsUsingPUT(opts, callback);
+apiInstance.createCredentialsFromRequestUsingPUT(opts, callback);
 ```
 
 ### Parameters
@@ -127,6 +127,67 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: */*
+
+<a name="generateProversCredentialRequestUsingGET"></a>
+# **generateProversCredentialRequestUsingGET**
+> CredentialRequest generateProversCredentialRequestUsingGET(opts)
+
+generateProversCredentialRequest
+
+### Example
+```javascript
+var ApiDocumentation = require('api_documentation');
+
+var apiInstance = new ApiDocumentation.IssuerControllerApi();
+
+var opts = { 
+  'credDefId': "credDefId_example", // String | 
+  'credDefJson': "credDefJson_example", // String | 
+  'credDefs': "credDefs_example", // String | 
+  'indyWalletWalletHandle': 56, // Number | 
+  'indyWalletWalletHandle2': 56, // Number | 
+  'masterSecretId': "masterSecretId_example", // String | 
+  'masterSecretId2': "masterSecretId_example", // String | 
+  'personDid': "personDid_example", // String | 
+  'personDid2': "personDid_example" // String | 
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.generateProversCredentialRequestUsingGET(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **credDefId** | **String**|  | [optional] 
+ **credDefJson** | **String**|  | [optional] 
+ **credDefs** | **String**|  | [optional] 
+ **indyWalletWalletHandle** | **Number**|  | [optional] 
+ **indyWalletWalletHandle2** | **Number**|  | [optional] 
+ **masterSecretId** | **String**|  | [optional] 
+ **masterSecretId2** | **String**|  | [optional] 
+ **personDid** | **String**|  | [optional] 
+ **personDid2** | **String**|  | [optional] 
+
+### Return type
+
+[**CredentialRequest**](CredentialRequest.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: */*
 
 <a name="getCredentialDefinitionUsingGET"></a>
@@ -167,67 +228,6 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: */*
 
-<a name="getProverCredentialUsingGET"></a>
-# **getProverCredentialUsingGET**
-> CredentialRequest getProverCredentialUsingGET(opts)
-
-getProverCredential
-
-### Example
-```javascript
-var ApiDocumentation = require('api_documentation');
-
-var apiInstance = new ApiDocumentation.IssuerControllerApi();
-
-var opts = { 
-  'credDefId': "credDefId_example", // String | 
-  'credDefJson': "credDefJson_example", // String | 
-  'credDefs': "credDefs_example", // String | 
-  'indyWalletWalletHandle': 56, // Number | 
-  'indyWalletWalletHandle2': 56, // Number | 
-  'masterSecretId': "masterSecretId_example", // String | 
-  'masterSecretId2': "masterSecretId_example", // String | 
-  'personDid': "personDid_example", // String | 
-  'personDid2': "personDid_example" // String | 
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getProverCredentialUsingGET(opts, callback);
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **credDefId** | **String**|  | [optional] 
- **credDefJson** | **String**|  | [optional] 
- **credDefs** | **String**|  | [optional] 
- **indyWalletWalletHandle** | **Number**|  | [optional] 
- **indyWalletWalletHandle2** | **Number**|  | [optional] 
- **masterSecretId** | **String**|  | [optional] 
- **masterSecretId2** | **String**|  | [optional] 
- **personDid** | **String**|  | [optional] 
- **personDid2** | **String**|  | [optional] 
-
-### Return type
-
-[**CredentialRequest**](CredentialRequest.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
 <a name="issuerCreateCredentialsUsingPUT"></a>
 # **issuerCreateCredentialsUsingPUT**
 > Person issuerCreateCredentialsUsingPUT(opts)
@@ -242,11 +242,9 @@ var apiInstance = new ApiDocumentation.IssuerControllerApi();
 
 var opts = { 
   'dateOfBirth': new Date("2013-10-20"), // Date | dateOfBirth
-  'indyWalletWalletHandle': 56, // Number | 
+  'issuerDid': "issuerDid_example", // String | issuerDid
   'licenceLevel': 56, // Number | licenceLevel
-  'masterSecretId': "masterSecretId_example", // String | 
   'name': "name_example", // String | name
-  'personDid': "personDid_example", // String | 
   'proverDid': "proverDid_example", // String | proverDid
   'proverWalletId': "proverWalletId_example", // String | proverWalletId
   'proverWalletKey': "proverWalletKey_example" // String | proverWalletKey
@@ -267,11 +265,9 @@ apiInstance.issuerCreateCredentialsUsingPUT(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **dateOfBirth** | **Date**| dateOfBirth | [optional] 
- **indyWalletWalletHandle** | **Number**|  | [optional] 
+ **issuerDid** | **String**| issuerDid | [optional] 
  **licenceLevel** | **Number**| licenceLevel | [optional] 
- **masterSecretId** | **String**|  | [optional] 
  **name** | **String**| name | [optional] 
- **personDid** | **String**|  | [optional] 
  **proverDid** | **String**| proverDid | [optional] 
  **proverWalletId** | **String**| proverWalletId | [optional] 
  **proverWalletKey** | **String**| proverWalletKey | [optional] 

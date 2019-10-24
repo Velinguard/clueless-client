@@ -96,15 +96,15 @@
     }
 
     /**
-     * Callback function to receive the result of the createCredentialsUsingPUT operation.
-     * @callback module:api/IssuerControllerApi~createCredentialsUsingPUTCallback
+     * Callback function to receive the result of the createCredentialsFromRequestUsingPUT operation.
+     * @callback module:api/IssuerControllerApi~createCredentialsFromRequestUsingPUTCallback
      * @param {String} error Error message, if any.
      * @param {module:model/IssuerCreateCredentialResult} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * createCredentials
+     * createCredentialsFromRequest
      * @param {Object} opts Optional parameters
      * @param {String} opts.JSON 
      * @param {Number} opts.age 
@@ -119,10 +119,10 @@
      * @param {String} opts.masterSecretId 
      * @param {String} opts.name 
      * @param {Number} opts.walletHandle 
-     * @param {module:api/IssuerControllerApi~createCredentialsUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/IssuerControllerApi~createCredentialsFromRequestUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/IssuerCreateCredentialResult}
      */
-    this.createCredentialsUsingPUT = function(opts, callback) {
+    this.createCredentialsFromRequestUsingPUT = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
 
@@ -158,6 +158,66 @@
 
       return this.apiClient.callApi(
         '/create-credentials', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the generateProversCredentialRequestUsingGET operation.
+     * @callback module:api/IssuerControllerApi~generateProversCredentialRequestUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CredentialRequest} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * generateProversCredentialRequest
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.credDefId 
+     * @param {String} opts.credDefJson 
+     * @param {String} opts.credDefs 
+     * @param {Number} opts.indyWalletWalletHandle 
+     * @param {Number} opts.indyWalletWalletHandle2 
+     * @param {String} opts.masterSecretId 
+     * @param {String} opts.masterSecretId2 
+     * @param {String} opts.personDid 
+     * @param {String} opts.personDid2 
+     * @param {module:api/IssuerControllerApi~generateProversCredentialRequestUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CredentialRequest}
+     */
+    this.generateProversCredentialRequestUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'credDefId': opts['credDefId'],
+        'credDefJson': opts['credDefJson'],
+        'credDefs': opts['credDefs'],
+        'indyWallet.walletHandle': opts['indyWalletWalletHandle'],
+        'indyWallet.walletHandle': opts['indyWalletWalletHandle2'],
+        'masterSecretId': opts['masterSecretId'],
+        'masterSecretId': opts['masterSecretId2'],
+        'personDid': opts['personDid'],
+        'personDid': opts['personDid2'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['*/*'];
+      var returnType = CredentialRequest;
+
+      return this.apiClient.callApi(
+        '/generate-provers-credential-request', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -204,66 +264,6 @@
     }
 
     /**
-     * Callback function to receive the result of the getProverCredentialUsingGET operation.
-     * @callback module:api/IssuerControllerApi~getProverCredentialUsingGETCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CredentialRequest} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * getProverCredential
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.credDefId 
-     * @param {String} opts.credDefJson 
-     * @param {String} opts.credDefs 
-     * @param {Number} opts.indyWalletWalletHandle 
-     * @param {Number} opts.indyWalletWalletHandle2 
-     * @param {String} opts.masterSecretId 
-     * @param {String} opts.masterSecretId2 
-     * @param {String} opts.personDid 
-     * @param {String} opts.personDid2 
-     * @param {module:api/IssuerControllerApi~getProverCredentialUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CredentialRequest}
-     */
-    this.getProverCredentialUsingGET = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'credDefId': opts['credDefId'],
-        'credDefJson': opts['credDefJson'],
-        'credDefs': opts['credDefs'],
-        'indyWallet.walletHandle': opts['indyWalletWalletHandle'],
-        'indyWallet.walletHandle': opts['indyWalletWalletHandle2'],
-        'masterSecretId': opts['masterSecretId'],
-        'masterSecretId': opts['masterSecretId2'],
-        'personDid': opts['personDid'],
-        'personDid': opts['personDid2'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['*/*'];
-      var returnType = CredentialRequest;
-
-      return this.apiClient.callApi(
-        '/get-prover-credentials', 'GET',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the issuerCreateCredentialsUsingPUT operation.
      * @callback module:api/IssuerControllerApi~issuerCreateCredentialsUsingPUTCallback
      * @param {String} error Error message, if any.
@@ -275,11 +275,9 @@
      * issuerCreateCredentials
      * @param {Object} opts Optional parameters
      * @param {Date} opts.dateOfBirth dateOfBirth
-     * @param {Number} opts.indyWalletWalletHandle 
+     * @param {String} opts.issuerDid issuerDid
      * @param {Number} opts.licenceLevel licenceLevel
-     * @param {String} opts.masterSecretId 
      * @param {String} opts.name name
-     * @param {String} opts.personDid 
      * @param {String} opts.proverDid proverDid
      * @param {String} opts.proverWalletId proverWalletId
      * @param {String} opts.proverWalletKey proverWalletKey
@@ -295,11 +293,9 @@
       };
       var queryParams = {
         'dateOfBirth': opts['dateOfBirth'],
-        'indyWallet.walletHandle': opts['indyWalletWalletHandle'],
+        'issuerDid': opts['issuerDid'],
         'licenceLevel': opts['licenceLevel'],
-        'masterSecretId': opts['masterSecretId'],
         'name': opts['name'],
-        'personDid': opts['personDid'],
         'proverDid': opts['proverDid'],
         'proverWalletId': opts['proverWalletId'],
         'proverWalletKey': opts['proverWalletKey'],

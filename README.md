@@ -104,7 +104,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.errorUsingDELETE(callback);
+api.errorHtmlUsingDELETE(callback);
 
 ```
 
@@ -114,17 +114,17 @@ All URIs are relative to *https://34.244.72.181:8080*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingDELETE**](docs/BasicErrorControllerApi.md#errorUsingDELETE) | **DELETE** /error | error
-*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingGET**](docs/BasicErrorControllerApi.md#errorUsingGET) | **GET** /error | error
-*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingHEAD**](docs/BasicErrorControllerApi.md#errorUsingHEAD) | **HEAD** /error | error
-*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingOPTIONS**](docs/BasicErrorControllerApi.md#errorUsingOPTIONS) | **OPTIONS** /error | error
-*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingPATCH**](docs/BasicErrorControllerApi.md#errorUsingPATCH) | **PATCH** /error | error
-*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingPOST**](docs/BasicErrorControllerApi.md#errorUsingPOST) | **POST** /error | error
-*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingPUT**](docs/BasicErrorControllerApi.md#errorUsingPUT) | **PUT** /error | error
+*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingDELETE**](docs/BasicErrorControllerApi.md#errorHtmlUsingDELETE) | **DELETE** /error | errorHtml
+*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingGET**](docs/BasicErrorControllerApi.md#errorHtmlUsingGET) | **GET** /error | errorHtml
+*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingHEAD**](docs/BasicErrorControllerApi.md#errorHtmlUsingHEAD) | **HEAD** /error | errorHtml
+*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingOPTIONS**](docs/BasicErrorControllerApi.md#errorHtmlUsingOPTIONS) | **OPTIONS** /error | errorHtml
+*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingPATCH**](docs/BasicErrorControllerApi.md#errorHtmlUsingPATCH) | **PATCH** /error | errorHtml
+*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingPOST**](docs/BasicErrorControllerApi.md#errorHtmlUsingPOST) | **POST** /error | errorHtml
+*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingPUT**](docs/BasicErrorControllerApi.md#errorHtmlUsingPUT) | **PUT** /error | errorHtml
 *ApiDocumentation.IssuerControllerApi* | [**createCredentialDefinitionUsingPUT**](docs/IssuerControllerApi.md#createCredentialDefinitionUsingPUT) | **PUT** /create-credential-definition | createCredentialDefinition
-*ApiDocumentation.IssuerControllerApi* | [**createCredentialsUsingPUT**](docs/IssuerControllerApi.md#createCredentialsUsingPUT) | **PUT** /create-credentials | createCredentials
+*ApiDocumentation.IssuerControllerApi* | [**createCredentialsFromRequestUsingPUT**](docs/IssuerControllerApi.md#createCredentialsFromRequestUsingPUT) | **PUT** /create-credentials | createCredentialsFromRequest
+*ApiDocumentation.IssuerControllerApi* | [**generateProversCredentialRequestUsingGET**](docs/IssuerControllerApi.md#generateProversCredentialRequestUsingGET) | **GET** /generate-provers-credential-request | generateProversCredentialRequest
 *ApiDocumentation.IssuerControllerApi* | [**getCredentialDefinitionUsingGET**](docs/IssuerControllerApi.md#getCredentialDefinitionUsingGET) | **GET** /get-credential-definition | getCredentialDefinition
-*ApiDocumentation.IssuerControllerApi* | [**getProverCredentialUsingGET**](docs/IssuerControllerApi.md#getProverCredentialUsingGET) | **GET** /get-prover-credentials | getProverCredential
 *ApiDocumentation.IssuerControllerApi* | [**issuerCreateCredentialsUsingPUT**](docs/IssuerControllerApi.md#issuerCreateCredentialsUsingPUT) | **PUT** /create | issuerCreateCredentials
 *ApiDocumentation.ProofControllerApi* | [**getProofRequestUsingGET**](docs/ProofControllerApi.md#getProofRequestUsingGET) | **GET** /get-proof-request | getProofRequest
 *ApiDocumentation.ProverControllerApi* | [**proverGetProofCredentialsUsingGET**](docs/ProverControllerApi.md#proverGetProofCredentialsUsingGET) | **GET** /credentials-for-proof | proverGetProofCredentials
