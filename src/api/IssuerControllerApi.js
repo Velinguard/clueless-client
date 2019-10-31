@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CredentialDefinition', 'model/CredentialRequest', 'model/IssuerCreateCredentialResult', 'model/Person'], factory);
+    define(['ApiClient', 'model/CredentialDefinition', 'model/CredentialRequest', 'model/IssuerCreateCredentialResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/CredentialDefinition'), require('../model/CredentialRequest'), require('../model/IssuerCreateCredentialResult'), require('../model/Person'));
+    module.exports = factory(require('../ApiClient'), require('../model/CredentialDefinition'), require('../model/CredentialRequest'), require('../model/IssuerCreateCredentialResult'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.IssuerControllerApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.CredentialDefinition, root.ApiDocumentation.CredentialRequest, root.ApiDocumentation.IssuerCreateCredentialResult, root.ApiDocumentation.Person);
+    root.ApiDocumentation.IssuerControllerApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.CredentialDefinition, root.ApiDocumentation.CredentialRequest, root.ApiDocumentation.IssuerCreateCredentialResult);
   }
-}(this, function(ApiClient, CredentialDefinition, CredentialRequest, IssuerCreateCredentialResult, Person) {
+}(this, function(ApiClient, CredentialDefinition, CredentialRequest, IssuerCreateCredentialResult) {
   'use strict';
 
   /**
@@ -60,6 +60,7 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.indyWalletWalletHandle 
      * @param {String} opts.masterSecretId 
+     * @param {String} opts.name 
      * @param {String} opts.personDid 
      * @param {module:api/IssuerControllerApi~createCredentialDefinitionUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CredentialDefinition}
@@ -74,6 +75,7 @@
       var queryParams = {
         'indyWallet.walletHandle': opts['indyWalletWalletHandle'],
         'masterSecretId': opts['masterSecretId'],
+        'name': opts['name'],
         'personDid': opts['personDid'],
       };
       var collectionQueryParams = {
@@ -181,6 +183,8 @@
      * @param {Number} opts.indyWalletWalletHandle2 
      * @param {String} opts.masterSecretId 
      * @param {String} opts.masterSecretId2 
+     * @param {String} opts.name 
+     * @param {String} opts.name2 
      * @param {String} opts.personDid 
      * @param {String} opts.personDid2 
      * @param {module:api/IssuerControllerApi~generateProversCredentialRequestUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
@@ -201,6 +205,8 @@
         'indyWallet.walletHandle': opts['indyWalletWalletHandle2'],
         'masterSecretId': opts['masterSecretId'],
         'masterSecretId': opts['masterSecretId2'],
+        'name': opts['name'],
+        'name': opts['name2'],
         'personDid': opts['personDid'],
         'personDid': opts['personDid2'],
       };
@@ -267,7 +273,7 @@
      * Callback function to receive the result of the issuerCreateCredentialsUsingPUT operation.
      * @callback module:api/IssuerControllerApi~issuerCreateCredentialsUsingPUTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Person} data The data returned by the service call.
+     * @param {'String'} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -284,7 +290,7 @@
      * @param {String} opts.proverWalletId proverWalletId
      * @param {String} opts.proverWalletKey proverWalletKey
      * @param {module:api/IssuerControllerApi~issuerCreateCredentialsUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Person}
+     * data is of type: {@link 'String'}
      */
     this.issuerCreateCredentialsUsingPUT = function(opts, callback) {
       opts = opts || {};
@@ -314,7 +320,7 @@
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['*/*'];
-      var returnType = Person;
+      var returnType = 'String';
 
       return this.apiClient.callApi(
         '/create', 'PUT',

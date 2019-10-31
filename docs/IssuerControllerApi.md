@@ -26,6 +26,7 @@ var apiInstance = new ApiDocumentation.IssuerControllerApi();
 var opts = { 
   'indyWalletWalletHandle': 56, // Number | 
   'masterSecretId': "masterSecretId_example", // String | 
+  'name': "name_example", // String | 
   'personDid': "personDid_example" // String | 
 };
 
@@ -45,6 +46,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **indyWalletWalletHandle** | **Number**|  | [optional] 
  **masterSecretId** | **String**|  | [optional] 
+ **name** | **String**|  | [optional] 
  **personDid** | **String**|  | [optional] 
 
 ### Return type
@@ -149,6 +151,8 @@ var opts = {
   'indyWalletWalletHandle2': 56, // Number | 
   'masterSecretId': "masterSecretId_example", // String | 
   'masterSecretId2': "masterSecretId_example", // String | 
+  'name': "name_example", // String | 
+  'name2': "name_example", // String | 
   'personDid': "personDid_example", // String | 
   'personDid2': "personDid_example" // String | 
 };
@@ -174,6 +178,8 @@ Name | Type | Description  | Notes
  **indyWalletWalletHandle2** | **Number**|  | [optional] 
  **masterSecretId** | **String**|  | [optional] 
  **masterSecretId2** | **String**|  | [optional] 
+ **name** | **String**|  | [optional] 
+ **name2** | **String**|  | [optional] 
  **personDid** | **String**|  | [optional] 
  **personDid2** | **String**|  | [optional] 
 
@@ -230,7 +236,7 @@ No authorization required
 
 <a name="issuerCreateCredentialsUsingPUT"></a>
 # **issuerCreateCredentialsUsingPUT**
-> Person issuerCreateCredentialsUsingPUT(opts)
+> 'String' issuerCreateCredentialsUsingPUT(opts)
 
 issuerCreateCredentials
 
@@ -278,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Person**](Person.md)
+**'String'**
 
 ### Authorization
 

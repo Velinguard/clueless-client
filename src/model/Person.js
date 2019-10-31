@@ -58,6 +58,8 @@
         obj.indyWallet = Wallet.constructFromObject(data['indyWallet']);
       if (data.hasOwnProperty('masterSecretId'))
         obj.masterSecretId = ApiClient.convertToType(data['masterSecretId'], 'String');
+      if (data.hasOwnProperty('name'))
+        obj.name = ApiClient.convertToType(data['name'], 'String');
       if (data.hasOwnProperty('personDid'))
         obj.personDid = ApiClient.convertToType(data['personDid'], 'String');
     }
@@ -73,6 +75,11 @@
    * @member {String} masterSecretId
    */
   exports.prototype.masterSecretId = undefined;
+
+  /**
+   * @member {String} name
+   */
+  exports.prototype.name = undefined;
 
   /**
    * @member {String} personDid
