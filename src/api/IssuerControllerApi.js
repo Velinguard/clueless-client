@@ -276,6 +276,8 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.dateOfBirth dateOfBirth
      * @param {String} opts.issuerDid issuerDid
+     * @param {String} opts.issuerWalletId issuerWalletId
+     * @param {String} opts.issuerWalletKey issuerWalletKey
      * @param {Number} opts.licenceLevel licenceLevel
      * @param {String} opts.name name
      * @param {String} opts.proverDid proverDid
@@ -294,6 +296,8 @@
       var queryParams = {
         'dateOfBirth': opts['dateOfBirth'],
         'issuerDid': opts['issuerDid'],
+        'issuerWalletId': opts['issuerWalletId'],
+        'issuerWalletKey': opts['issuerWalletKey'],
         'licenceLevel': opts['licenceLevel'],
         'name': opts['name'],
         'proverDid': opts['proverDid'],

@@ -127,6 +127,7 @@ Class | Method | HTTP request | Description
 *ApiDocumentation.IssuerControllerApi* | [**getCredentialDefinitionUsingGET**](docs/IssuerControllerApi.md#getCredentialDefinitionUsingGET) | **GET** /get-credential-definition | getCredentialDefinition
 *ApiDocumentation.IssuerControllerApi* | [**issuerCreateCredentialsUsingPUT**](docs/IssuerControllerApi.md#issuerCreateCredentialsUsingPUT) | **PUT** /create | issuerCreateCredentials
 *ApiDocumentation.ProofControllerApi* | [**getProofRequestUsingGET**](docs/ProofControllerApi.md#getProofRequestUsingGET) | **GET** /get-proof-request | getProofRequest
+*ApiDocumentation.ProverControllerApi* | [**proverGetDefaultCredentialsUsingGET**](docs/ProverControllerApi.md#proverGetDefaultCredentialsUsingGET) | **GET** /credentials-for-default-proof | proverGetDefaultCredentials
 *ApiDocumentation.ProverControllerApi* | [**proverGetProofCredentialsUsingGET**](docs/ProverControllerApi.md#proverGetProofCredentialsUsingGET) | **GET** /credentials-for-proof | proverGetProofCredentials
 *ApiDocumentation.VerifierControllerApi* | [**verifyProofUsingGET**](docs/VerifierControllerApi.md#verifyProofUsingGET) | **GET** /prove | verifyProof
 *ApiDocumentation.WalletControllerApi* | [**closeWalletUsingDELETE**](docs/WalletControllerApi.md#closeWalletUsingDELETE) | **DELETE** /close-wallet | closeWallet

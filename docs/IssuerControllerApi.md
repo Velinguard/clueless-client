@@ -243,6 +243,8 @@ var apiInstance = new ApiDocumentation.IssuerControllerApi();
 var opts = { 
   'dateOfBirth': "dateOfBirth_example", // String | dateOfBirth
   'issuerDid': "issuerDid_example", // String | issuerDid
+  'issuerWalletId': "issuerWalletId_example", // String | issuerWalletId
+  'issuerWalletKey': "issuerWalletKey_example", // String | issuerWalletKey
   'licenceLevel': 56, // Number | licenceLevel
   'name': "name_example", // String | name
   'proverDid': "proverDid_example", // String | proverDid
@@ -266,6 +268,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **dateOfBirth** | **String**| dateOfBirth | [optional] 
  **issuerDid** | **String**| issuerDid | [optional] 
+ **issuerWalletId** | **String**| issuerWalletId | [optional] 
+ **issuerWalletKey** | **String**| issuerWalletKey | [optional] 
  **licenceLevel** | **Number**| licenceLevel | [optional] 
  **name** | **String**| name | [optional] 
  **proverDid** | **String**| proverDid | [optional] 

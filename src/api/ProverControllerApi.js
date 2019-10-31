@@ -48,6 +48,56 @@
 
 
     /**
+     * Callback function to receive the result of the proverGetDefaultCredentialsUsingGET operation.
+     * @callback module:api/ProverControllerApi~proverGetDefaultCredentialsUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * proverGetDefaultCredentials
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.masterSecretId masterSecretId
+     * @param {String} opts.proverDID proverDID
+     * @param {String} opts.proverWalletID proverWalletID
+     * @param {String} opts.proverWalletKey proverWalletKey
+     * @param {module:api/ProverControllerApi~proverGetDefaultCredentialsUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'String'}
+     */
+    this.proverGetDefaultCredentialsUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'masterSecretId': opts['masterSecretId'],
+        'proverDID': opts['proverDID'],
+        'proverWalletID': opts['proverWalletID'],
+        'proverWalletKey': opts['proverWalletKey'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['*/*'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/credentials-for-default-proof', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the proverGetProofCredentialsUsingGET operation.
      * @callback module:api/ProverControllerApi~proverGetProofCredentialsUsingGETCallback
      * @param {String} error Error message, if any.
@@ -58,14 +108,11 @@
     /**
      * proverGetProofCredentials
      * @param {Object} opts Optional parameters
-     * @param {String} opts.credDefId 
-     * @param {String} opts.credDefJson 
-     * @param {String} opts.credDefs 
-     * @param {Number} opts.indyWalletWalletHandle 
-     * @param {String} opts.masterSecretId 
-     * @param {String} opts.masterSecretId2 masterSecretId
-     * @param {String} opts.personDid 
+     * @param {String} opts.masterSecretId masterSecretId
      * @param {String} opts.proofRequestJson proofRequestJson
+     * @param {String} opts.proverDID proverDID
+     * @param {String} opts.proverWalletID proverWalletID
+     * @param {String} opts.proverWalletKey proverWalletKey
      * @param {module:api/ProverControllerApi~proverGetProofCredentialsUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'String'}
      */
@@ -77,14 +124,11 @@
       var pathParams = {
       };
       var queryParams = {
-        'credDefId': opts['credDefId'],
-        'credDefJson': opts['credDefJson'],
-        'credDefs': opts['credDefs'],
-        'indyWallet.walletHandle': opts['indyWalletWalletHandle'],
         'masterSecretId': opts['masterSecretId'],
-        'masterSecretId': opts['masterSecretId2'],
-        'personDid': opts['personDid'],
         'proofRequestJson': opts['proofRequestJson'],
+        'proverDID': opts['proverDID'],
+        'proverWalletID': opts['proverWalletID'],
+        'proverWalletKey': opts['proverWalletKey'],
       };
       var collectionQueryParams = {
       };
