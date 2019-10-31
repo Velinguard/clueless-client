@@ -48,7 +48,7 @@
      * @type {String}
      * @default https://34.244.72.181:8080
      */
-    this.basePath = 'https://34.244.72.181:8080'.replace(/\/+$/, '');
+    this.basePath = 'http://34.244.72.181:8080'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.
