@@ -50,11 +50,11 @@ command above from.
 #### git
 #
 If the library is hosted at a git repository, e.g.
-https://github.com/GIT_USER_ID/GIT_REPO_ID
+https://github.com/YOUR_USERNAME/api_documentation
 then install it via:
 
 ```shell
-    npm install GIT_USER_ID/GIT_REPO_ID --save
+    npm install YOUR_USERNAME/api_documentation --save
 ```
 
 ### For browser

@@ -241,7 +241,7 @@ var ApiDocumentation = require('api_documentation');
 var apiInstance = new ApiDocumentation.IssuerControllerApi();
 
 var opts = { 
-  'dateOfBirth': new Date("2013-10-20"), // Date | dateOfBirth
+  'dateOfBirth': "dateOfBirth_example", // String | dateOfBirth
   'issuerDid': "issuerDid_example", // String | issuerDid
   'licenceLevel': 56, // Number | licenceLevel
   'name': "name_example", // String | name
@@ -264,7 +264,7 @@ apiInstance.issuerCreateCredentialsUsingPUT(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dateOfBirth** | **Date**| dateOfBirth | [optional] 
+ **dateOfBirth** | **String**| dateOfBirth | [optional] 
  **issuerDid** | **String**| issuerDid | [optional] 
  **licenceLevel** | **Number**| licenceLevel | [optional] 
  **name** | **String**| name | [optional] 

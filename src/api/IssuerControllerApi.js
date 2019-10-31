@@ -274,7 +274,7 @@
     /**
      * issuerCreateCredentials
      * @param {Object} opts Optional parameters
-     * @param {Date} opts.dateOfBirth dateOfBirth
+     * @param {String} opts.dateOfBirth dateOfBirth
      * @param {String} opts.issuerDid issuerDid
      * @param {Number} opts.licenceLevel licenceLevel
      * @param {String} opts.name name
