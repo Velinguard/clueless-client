@@ -48,6 +48,62 @@
 
 
     /**
+     * Callback function to receive the result of the verifyProofFromS3UsingGET operation.
+     * @callback module:api/VerifierControllerApi~verifyProofFromS3UsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {'Boolean'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * verifyProofFromS3
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.bucketName bucketName
+     * @param {String} opts.credDefId 
+     * @param {String} opts.credDefJson 
+     * @param {String} opts.credDefs 
+     * @param {String} opts.name name
+     * @param {String} opts.objectName objectName
+     * @param {String} opts.proofRequestJson proofRequestJson
+     * @param {module:api/VerifierControllerApi~verifyProofFromS3UsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'Boolean'}
+     */
+    this.verifyProofFromS3UsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'bucketName': opts['bucketName'],
+        'credDefId': opts['credDefId'],
+        'credDefJson': opts['credDefJson'],
+        'credDefs': opts['credDefs'],
+        'name': opts['name'],
+        'objectName': opts['objectName'],
+        'proofRequestJson': opts['proofRequestJson'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['*/*'];
+      var returnType = 'Boolean';
+
+      return this.apiClient.callApi(
+        '/prove-s3', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the verifyProofUsingGET operation.
      * @callback module:api/VerifierControllerApi~verifyProofUsingGETCallback
      * @param {String} error Error message, if any.

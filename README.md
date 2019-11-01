@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *ApiDocumentation.ProofControllerApi* | [**getProofRequestUsingGET**](docs/ProofControllerApi.md#getProofRequestUsingGET) | **GET** /get-proof-request | getProofRequest
 *ApiDocumentation.ProverControllerApi* | [**proverGetDefaultCredentialsUsingGET**](docs/ProverControllerApi.md#proverGetDefaultCredentialsUsingGET) | **GET** /credentials-for-default-proof | proverGetDefaultCredentials
 *ApiDocumentation.ProverControllerApi* | [**proverGetProofCredentialsUsingGET**](docs/ProverControllerApi.md#proverGetProofCredentialsUsingGET) | **GET** /credentials-for-proof | proverGetProofCredentials
+*ApiDocumentation.VerifierControllerApi* | [**verifyProofFromS3UsingGET**](docs/VerifierControllerApi.md#verifyProofFromS3UsingGET) | **GET** /prove-s3 | verifyProofFromS3
 *ApiDocumentation.VerifierControllerApi* | [**verifyProofUsingGET**](docs/VerifierControllerApi.md#verifyProofUsingGET) | **GET** /prove | verifyProof
 *ApiDocumentation.WalletControllerApi* | [**closeWalletUsingDELETE**](docs/WalletControllerApi.md#closeWalletUsingDELETE) | **DELETE** /close-wallet | closeWallet
 *ApiDocumentation.WalletControllerApi* | [**createWalletUsingPUT**](docs/WalletControllerApi.md#createWalletUsingPUT) | **PUT** /create-wallet | createWallet

@@ -4,8 +4,66 @@ All URIs are relative to *https://34.244.72.181:8080*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**verifyProofFromS3UsingGET**](VerifierControllerApi.md#verifyProofFromS3UsingGET) | **GET** /prove-s3 | verifyProofFromS3
 [**verifyProofUsingGET**](VerifierControllerApi.md#verifyProofUsingGET) | **GET** /prove | verifyProof
 
+
+<a name="verifyProofFromS3UsingGET"></a>
+# **verifyProofFromS3UsingGET**
+> 'Boolean' verifyProofFromS3UsingGET(opts)
+
+verifyProofFromS3
+
+### Example
+```javascript
+var ApiDocumentation = require('api_documentation');
+
+var apiInstance = new ApiDocumentation.VerifierControllerApi();
+
+var opts = { 
+  'bucketName': "bucketName_example", // String | bucketName
+  'credDefId': "credDefId_example", // String | 
+  'credDefJson': "credDefJson_example", // String | 
+  'credDefs': "credDefs_example", // String | 
+  'name': "name_example", // String | name
+  'objectName': "objectName_example", // String | objectName
+  'proofRequestJson': "proofRequestJson_example" // String | proofRequestJson
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.verifyProofFromS3UsingGET(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bucketName** | **String**| bucketName | [optional] 
+ **credDefId** | **String**|  | [optional] 
+ **credDefJson** | **String**|  | [optional] 
+ **credDefs** | **String**|  | [optional] 
+ **name** | **String**| name | [optional] 
+ **objectName** | **String**| objectName | [optional] 
+ **proofRequestJson** | **String**| proofRequestJson | [optional] 
+
+### Return type
+
+**'Boolean'**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
 
 <a name="verifyProofUsingGET"></a>
 # **verifyProofUsingGET**
