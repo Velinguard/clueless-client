@@ -59,12 +59,8 @@
      * verifyProofFromS3
      * @param {Object} opts Optional parameters
      * @param {String} opts.bucketName bucketName
-     * @param {String} opts.credDefId 
-     * @param {String} opts.credDefJson 
-     * @param {String} opts.credDefs 
      * @param {String} opts.name name
      * @param {String} opts.objectName objectName
-     * @param {String} opts.proofRequestJson proofRequestJson
      * @param {module:api/VerifierControllerApi~verifyProofFromS3UsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Boolean'}
      */
@@ -77,12 +73,8 @@
       };
       var queryParams = {
         'bucketName': opts['bucketName'],
-        'credDefId': opts['credDefId'],
-        'credDefJson': opts['credDefJson'],
-        'credDefs': opts['credDefs'],
         'name': opts['name'],
         'objectName': opts['objectName'],
-        'proofRequestJson': opts['proofRequestJson'],
       };
       var collectionQueryParams = {
       };

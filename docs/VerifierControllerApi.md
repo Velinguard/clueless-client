@@ -22,12 +22,8 @@ var apiInstance = new ApiDocumentation.VerifierControllerApi();
 
 var opts = { 
   'bucketName': "bucketName_example", // String | bucketName
-  'credDefId': "credDefId_example", // String | 
-  'credDefJson': "credDefJson_example", // String | 
-  'credDefs': "credDefs_example", // String | 
   'name': "name_example", // String | name
-  'objectName': "objectName_example", // String | objectName
-  'proofRequestJson': "proofRequestJson_example" // String | proofRequestJson
+  'objectName': "objectName_example" // String | objectName
 };
 
 var callback = function(error, data, response) {
@@ -45,12 +41,8 @@ apiInstance.verifyProofFromS3UsingGET(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **bucketName** | **String**| bucketName | [optional] 
- **credDefId** | **String**|  | [optional] 
- **credDefJson** | **String**|  | [optional] 
- **credDefs** | **String**|  | [optional] 
  **name** | **String**| name | [optional] 
  **objectName** | **String**| objectName | [optional] 
- **proofRequestJson** | **String**| proofRequestJson | [optional] 
 
 ### Return type
 
