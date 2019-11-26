@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="85bad189-be9b-4bc5-8fb2-6da635305ad6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/IssuerControllerApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/IssuerControllerApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/git_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/git_push.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/IssuerControllerApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/IssuerControllerApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +68,7 @@
       <updated>1573746781695</updated>
       <workItem from="1573746783080" duration="819000" />
       <workItem from="1574774691820" duration="835000" />
-      <workItem from="1574775544982" duration="1642000" />
+      <workItem from="1574775544982" duration="1749000" />
     </task>
     <servers />
   </component>
