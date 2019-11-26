@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**createIssuerUsingPUT**](IssuerControllerApi.md#createIssuerUsingPUT) | **PUT** /create-issuer | createIssuer
 [**getCredentialDefinitionUsingPUT**](IssuerControllerApi.md#getCredentialDefinitionUsingPUT) | **PUT** /get-credential-definition | getCredentialDefinition
 [**issuerCreateCredentialsUsingPUT**](IssuerControllerApi.md#issuerCreateCredentialsUsingPUT) | **PUT** /create | issuerCreateCredentials
+[**issuerEmailCreatedCredentialsUsingPUT**](IssuerControllerApi.md#issuerEmailCreatedCredentialsUsingPUT) | **PUT** /create-email | issuerEmailCreatedCredentials
 
 
 <a name="createCredSchemaUsingPUT"></a>
@@ -229,7 +230,7 @@ var opts = {
   'issuerDid': "issuerDid_example", // String | issuerDid
   'issuerWalletId': "issuerWalletId_example", // String | issuerWalletId
   'issuerWalletKey': "issuerWalletKey_example", // String | issuerWalletKey
-  'licenceLevel': 56, // Number | licenceLevel
+  'licenceLevel': "licenceLevel_example", // String | licenceLevel
   'name': "name_example", // String | name
   'proverDid': "proverDid_example", // String | proverDid
   'proverWalletId': "proverWalletId_example", // String | proverWalletId
@@ -255,7 +256,7 @@ Name | Type | Description  | Notes
  **issuerDid** | **String**| issuerDid | [optional] 
  **issuerWalletId** | **String**| issuerWalletId | [optional] 
  **issuerWalletKey** | **String**| issuerWalletKey | [optional] 
- **licenceLevel** | **Number**| licenceLevel | [optional] 
+ **licenceLevel** | **String**| licenceLevel | [optional] 
  **name** | **String**| name | [optional] 
  **proverDid** | **String**| proverDid | [optional] 
  **proverWalletId** | **String**| proverWalletId | [optional] 
@@ -264,6 +265,71 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**EmailInfo**](EmailInfo.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: */*
+
+<a name="issuerEmailCreatedCredentialsUsingPUT"></a>
+# **issuerEmailCreatedCredentialsUsingPUT**
+> issuerEmailCreatedCredentialsUsingPUT(opts)
+
+issuerEmailCreatedCredentials
+
+### Example
+```javascript
+var ApiDocumentation = require('api_documentation');
+
+var apiInstance = new ApiDocumentation.IssuerControllerApi();
+
+var opts = { 
+  'credDefId': "credDefId_example", // String | credDefId
+  'dateOfBirth': "dateOfBirth_example", // String | dateOfBirth
+  'email': "email_example", // String | email
+  'issuerDid': "issuerDid_example", // String | issuerDid
+  'issuerWalletId': "issuerWalletId_example", // String | issuerWalletId
+  'issuerWalletKey': "issuerWalletKey_example", // String | issuerWalletKey
+  'licenceLevel': "licenceLevel_example", // String | licenceLevel
+  'name': "name_example", // String | name
+  'proverDid': "proverDid_example", // String | proverDid
+  'proverWalletId': "proverWalletId_example", // String | proverWalletId
+  'proverWalletKey': "proverWalletKey_example" // String | proverWalletKey
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+apiInstance.issuerEmailCreatedCredentialsUsingPUT(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **credDefId** | **String**| credDefId | [optional] 
+ **dateOfBirth** | **String**| dateOfBirth | [optional] 
+ **email** | **String**| email | [optional] 
+ **issuerDid** | **String**| issuerDid | [optional] 
+ **issuerWalletId** | **String**| issuerWalletId | [optional] 
+ **issuerWalletKey** | **String**| issuerWalletKey | [optional] 
+ **licenceLevel** | **String**| licenceLevel | [optional] 
+ **name** | **String**| name | [optional] 
+ **proverDid** | **String**| proverDid | [optional] 
+ **proverWalletId** | **String**| proverWalletId | [optional] 
+ **proverWalletKey** | **String**| proverWalletKey | [optional] 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

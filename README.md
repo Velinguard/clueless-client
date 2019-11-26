@@ -50,11 +50,11 @@ command above from.
 #### git
 #
 If the library is hosted at a git repository, e.g.
-https://github.com/GIT_USER_ID/GIT_REPO_ID
+https://github.com/YOUR_USERNAME/api_documentation
 then install it via:
 
 ```shell
-    npm install GIT_USER_ID/GIT_REPO_ID --save
+    npm install YOUR_USERNAME/api_documentation --save
 ```
 
 ### For browser
@@ -126,6 +126,7 @@ Class | Method | HTTP request | Description
 *ApiDocumentation.IssuerControllerApi* | [**createIssuerUsingPUT**](docs/IssuerControllerApi.md#createIssuerUsingPUT) | **PUT** /create-issuer | createIssuer
 *ApiDocumentation.IssuerControllerApi* | [**getCredentialDefinitionUsingPUT**](docs/IssuerControllerApi.md#getCredentialDefinitionUsingPUT) | **PUT** /get-credential-definition | getCredentialDefinition
 *ApiDocumentation.IssuerControllerApi* | [**issuerCreateCredentialsUsingPUT**](docs/IssuerControllerApi.md#issuerCreateCredentialsUsingPUT) | **PUT** /create | issuerCreateCredentials
+*ApiDocumentation.IssuerControllerApi* | [**issuerEmailCreatedCredentialsUsingPUT**](docs/IssuerControllerApi.md#issuerEmailCreatedCredentialsUsingPUT) | **PUT** /create-email | issuerEmailCreatedCredentials
 *ApiDocumentation.ProofControllerApi* | [**getLicencesUsingGET**](docs/ProofControllerApi.md#getLicencesUsingGET) | **GET** /get-licence-type | getLicences
 *ApiDocumentation.ProofControllerApi* | [**getProofJsonUsingGET**](docs/ProofControllerApi.md#getProofJsonUsingGET) | **GET** /get-proof | getProofJson
 *ApiDocumentation.ProofControllerApi* | [**getProofRequestUsingGET**](docs/ProofControllerApi.md#getProofRequestUsingGET) | **GET** /get-proof-request | getProofRequest

@@ -259,7 +259,7 @@
      * @param {String} opts.issuerDid issuerDid
      * @param {String} opts.issuerWalletId issuerWalletId
      * @param {String} opts.issuerWalletKey issuerWalletKey
-     * @param {Number} opts.licenceLevel licenceLevel
+     * @param {String} opts.licenceLevel licenceLevel
      * @param {String} opts.name name
      * @param {String} opts.proverDid proverDid
      * @param {String} opts.proverWalletId proverWalletId
@@ -300,6 +300,69 @@
 
       return this.apiClient.callApi(
         '/create', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the issuerEmailCreatedCredentialsUsingPUT operation.
+     * @callback module:api/IssuerControllerApi~issuerEmailCreatedCredentialsUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * issuerEmailCreatedCredentials
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.credDefId credDefId
+     * @param {String} opts.dateOfBirth dateOfBirth
+     * @param {String} opts.email email
+     * @param {String} opts.issuerDid issuerDid
+     * @param {String} opts.issuerWalletId issuerWalletId
+     * @param {String} opts.issuerWalletKey issuerWalletKey
+     * @param {String} opts.licenceLevel licenceLevel
+     * @param {String} opts.name name
+     * @param {String} opts.proverDid proverDid
+     * @param {String} opts.proverWalletId proverWalletId
+     * @param {String} opts.proverWalletKey proverWalletKey
+     * @param {module:api/IssuerControllerApi~issuerEmailCreatedCredentialsUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.issuerEmailCreatedCredentialsUsingPUT = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'credDefId': opts['credDefId'],
+        'dateOfBirth': opts['dateOfBirth'],
+        'email': opts['email'],
+        'issuerDid': opts['issuerDid'],
+        'issuerWalletId': opts['issuerWalletId'],
+        'issuerWalletKey': opts['issuerWalletKey'],
+        'licenceLevel': opts['licenceLevel'],
+        'name': opts['name'],
+        'proverDid': opts['proverDid'],
+        'proverWalletId': opts['proverWalletId'],
+        'proverWalletKey': opts['proverWalletKey'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['*/*'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/create-email', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
