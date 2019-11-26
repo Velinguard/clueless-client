@@ -59,8 +59,13 @@
      * verifyProofFromS3
      * @param {Object} opts Optional parameters
      * @param {String} opts.bucketName bucketName
+     * @param {String} opts.credDefId credDefId
      * @param {String} opts.name name
      * @param {String} opts.objectName objectName
+     * @param {String} opts.schemaId schemaId
+     * @param {String} opts.verifierDid verifierDid
+     * @param {String} opts.verifierWalletId verifierWalletId
+     * @param {String} opts.verifierWalletKey verifierWalletKey
      * @param {module:api/VerifierControllerApi~verifyProofFromS3UsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Boolean'}
      */
@@ -73,8 +78,13 @@
       };
       var queryParams = {
         'bucketName': opts['bucketName'],
+        'credDefId': opts['credDefId'],
         'name': opts['name'],
         'objectName': opts['objectName'],
+        'schemaId': opts['schemaId'],
+        'verifierDid': opts['verifierDid'],
+        'verifierWalletId': opts['verifierWalletId'],
+        'verifierWalletKey': opts['verifierWalletKey'],
       };
       var collectionQueryParams = {
       };
@@ -107,11 +117,16 @@
      * verifyProof
      * @param {Object} opts Optional parameters
      * @param {String} opts.credDefId 
+     * @param {String} opts.credDefId2 credDefId
      * @param {String} opts.credDefJson 
      * @param {String} opts.credDefs 
      * @param {String} opts.name name
      * @param {String} opts.proofJson proofJson
      * @param {String} opts.proofRequestJson proofRequestJson
+     * @param {String} opts.schemaId schemaId
+     * @param {String} opts.verifierDid verifierDid
+     * @param {String} opts.verifierWalletId verifierWalletId
+     * @param {String} opts.verifierWalletKey verifierWalletKey
      * @param {module:api/VerifierControllerApi~verifyProofUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'Boolean'}
      */
@@ -124,11 +139,16 @@
       };
       var queryParams = {
         'credDefId': opts['credDefId'],
+        'credDefId': opts['credDefId2'],
         'credDefJson': opts['credDefJson'],
         'credDefs': opts['credDefs'],
         'name': opts['name'],
         'proofJson': opts['proofJson'],
         'proofRequestJson': opts['proofRequestJson'],
+        'schemaId': opts['schemaId'],
+        'verifierDid': opts['verifierDid'],
+        'verifierWalletId': opts['verifierWalletId'],
+        'verifierWalletKey': opts['verifierWalletKey'],
       };
       var collectionQueryParams = {
       };

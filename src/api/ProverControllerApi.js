@@ -58,10 +58,12 @@
     /**
      * proverGetDefaultCredentials
      * @param {Object} opts Optional parameters
+     * @param {String} opts.credDefId credDefId
      * @param {String} opts.masterSecretId masterSecretId
      * @param {String} opts.proverDID proverDID
      * @param {String} opts.proverWalletID proverWalletID
      * @param {String} opts.proverWalletKey proverWalletKey
+     * @param {String} opts.schemaId schemaId
      * @param {module:api/ProverControllerApi~proverGetDefaultCredentialsUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'String'}
      */
@@ -73,10 +75,12 @@
       var pathParams = {
       };
       var queryParams = {
+        'credDefId': opts['credDefId'],
         'masterSecretId': opts['masterSecretId'],
         'proverDID': opts['proverDID'],
         'proverWalletID': opts['proverWalletID'],
         'proverWalletKey': opts['proverWalletKey'],
+        'schemaId': opts['schemaId'],
       };
       var collectionQueryParams = {
       };
@@ -108,11 +112,13 @@
     /**
      * proverGetProofCredentials
      * @param {Object} opts Optional parameters
+     * @param {String} opts.credDefId credDefId
      * @param {String} opts.masterSecretId masterSecretId
      * @param {String} opts.proofRequestJson proofRequestJson
      * @param {String} opts.proverDID proverDID
      * @param {String} opts.proverWalletID proverWalletID
      * @param {String} opts.proverWalletKey proverWalletKey
+     * @param {String} opts.schemaId schemaId
      * @param {module:api/ProverControllerApi~proverGetProofCredentialsUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link 'String'}
      */
@@ -124,11 +130,13 @@
       var pathParams = {
       };
       var queryParams = {
+        'credDefId': opts['credDefId'],
         'masterSecretId': opts['masterSecretId'],
         'proofRequestJson': opts['proofRequestJson'],
         'proverDID': opts['proverDID'],
         'proverWalletID': opts['proverWalletID'],
         'proverWalletKey': opts['proverWalletKey'],
+        'schemaId': opts['schemaId'],
       };
       var collectionQueryParams = {
       };

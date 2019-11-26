@@ -121,12 +121,15 @@ Class | Method | HTTP request | Description
 *ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingPATCH**](docs/BasicErrorControllerApi.md#errorHtmlUsingPATCH) | **PATCH** /error | errorHtml
 *ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingPOST**](docs/BasicErrorControllerApi.md#errorHtmlUsingPOST) | **POST** /error | errorHtml
 *ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingPUT**](docs/BasicErrorControllerApi.md#errorHtmlUsingPUT) | **PUT** /error | errorHtml
+*ApiDocumentation.IssuerControllerApi* | [**createCredSchemaUsingPUT**](docs/IssuerControllerApi.md#createCredSchemaUsingPUT) | **PUT** /create-credential-schema | createCredSchema
 *ApiDocumentation.IssuerControllerApi* | [**createCredentialDefinitionUsingPUT**](docs/IssuerControllerApi.md#createCredentialDefinitionUsingPUT) | **PUT** /create-credential-definition | createCredentialDefinition
-*ApiDocumentation.IssuerControllerApi* | [**createCredentialsFromRequestUsingPUT**](docs/IssuerControllerApi.md#createCredentialsFromRequestUsingPUT) | **PUT** /create-credentials | createCredentialsFromRequest
-*ApiDocumentation.IssuerControllerApi* | [**generateProversCredentialRequestUsingGET**](docs/IssuerControllerApi.md#generateProversCredentialRequestUsingGET) | **GET** /generate-provers-credential-request | generateProversCredentialRequest
-*ApiDocumentation.IssuerControllerApi* | [**getCredentialDefinitionUsingGET**](docs/IssuerControllerApi.md#getCredentialDefinitionUsingGET) | **GET** /get-credential-definition | getCredentialDefinition
+*ApiDocumentation.IssuerControllerApi* | [**createIssuerUsingPUT**](docs/IssuerControllerApi.md#createIssuerUsingPUT) | **PUT** /create-issuer | createIssuer
+*ApiDocumentation.IssuerControllerApi* | [**getCredentialDefinitionUsingPUT**](docs/IssuerControllerApi.md#getCredentialDefinitionUsingPUT) | **PUT** /get-credential-definition | getCredentialDefinition
 *ApiDocumentation.IssuerControllerApi* | [**issuerCreateCredentialsUsingPUT**](docs/IssuerControllerApi.md#issuerCreateCredentialsUsingPUT) | **PUT** /create | issuerCreateCredentials
+*ApiDocumentation.ProofControllerApi* | [**getLicencesUsingGET**](docs/ProofControllerApi.md#getLicencesUsingGET) | **GET** /get-licence-type | getLicences
+*ApiDocumentation.ProofControllerApi* | [**getProofJsonUsingGET**](docs/ProofControllerApi.md#getProofJsonUsingGET) | **GET** /get-proof | getProofJson
 *ApiDocumentation.ProofControllerApi* | [**getProofRequestUsingGET**](docs/ProofControllerApi.md#getProofRequestUsingGET) | **GET** /get-proof-request | getProofRequest
+*ApiDocumentation.ProofControllerApi* | [**getProofsUsingGET**](docs/ProofControllerApi.md#getProofsUsingGET) | **GET** /get-proofs | getProofs
 *ApiDocumentation.ProverControllerApi* | [**proverGetDefaultCredentialsUsingGET**](docs/ProverControllerApi.md#proverGetDefaultCredentialsUsingGET) | **GET** /credentials-for-default-proof | proverGetDefaultCredentials
 *ApiDocumentation.ProverControllerApi* | [**proverGetProofCredentialsUsingGET**](docs/ProverControllerApi.md#proverGetProofCredentialsUsingGET) | **GET** /credentials-for-proof | proverGetProofCredentials
 *ApiDocumentation.VerifierControllerApi* | [**verifyProofFromS3UsingGET**](docs/VerifierControllerApi.md#verifyProofFromS3UsingGET) | **GET** /prove-s3 | verifyProofFromS3
@@ -141,11 +144,9 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [ApiDocumentation.CredentialDefinition](docs/CredentialDefinition.md)
- - [ApiDocumentation.CredentialRequest](docs/CredentialRequest.md)
- - [ApiDocumentation.IssuerCreateCredentialResult](docs/IssuerCreateCredentialResult.md)
+ - [ApiDocumentation.EmailInfo](docs/EmailInfo.md)
  - [ApiDocumentation.ModelAndView](docs/ModelAndView.md)
  - [ApiDocumentation.Person](docs/Person.md)
- - [ApiDocumentation.ProverCreateCredentialRequestResult](docs/ProverCreateCredentialRequestResult.md)
  - [ApiDocumentation.View](docs/View.md)
  - [ApiDocumentation.Wallet](docs/Wallet.md)
 
