@@ -35,23 +35,19 @@
 
   describe('(package)', function() {
     describe('ProverControllerApi', function() {
-      describe('proverGetCredentialsUsingGET', function() {
-        it('should call proverGetCredentialsUsingGET successfully', function(done) {
-          // TODO: uncomment, update parameter values for proverGetCredentialsUsingGET call and complete the assertions
+      describe('proverGetDefaultCredentialsUsingGET', function() {
+        it('should call proverGetDefaultCredentialsUsingGET successfully', function(done) {
+          // TODO: uncomment, update parameter values for proverGetDefaultCredentialsUsingGET call and complete the assertions
           /*
           var opts = {};
-          opts.credOffer = "credOffer_example";
-          opts.credRequestCredentialRequestJson = "credRequestCredentialRequestJson_example";
-          opts.credRequestCredentialRequestMetadataJson = "credRequestCredentialRequestMetadataJson_example";
-          opts.credentialJson = "credentialJson_example";
-          opts.credentialsCredDefId = "credentialsCredDefId_example";
-          opts.credentialsCredDefJson = "credentialsCredDefJson_example";
+          opts.credDefId = "credDefId_example";
           opts.masterSecretId = "masterSecretId_example";
-          opts.revocId = "revocId_example";
-          opts.revocRegDeltaJson = "revocRegDeltaJson_example";
-          opts.walletHandle = 56;
+          opts.proverDID = "proverDID_example";
+          opts.proverWalletID = "proverWalletID_example";
+          opts.proverWalletKey = "proverWalletKey_example";
+          opts.schemaId = "schemaId_example";
 
-          instance.proverGetCredentialsUsingGET(opts, function(error, data, response) {
+          instance.proverGetDefaultCredentialsUsingGET(opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
@@ -72,14 +68,13 @@
           // TODO: uncomment, update parameter values for proverGetProofCredentialsUsingGET call and complete the assertions
           /*
           var opts = {};
-          opts.credOffer = "credOffer_example";
-          opts.credRequestCredentialRequestJson = "credRequestCredentialRequestJson_example";
-          opts.credRequestCredentialRequestMetadataJson = "credRequestCredentialRequestMetadataJson_example";
-          opts.credentialsCredDefId = "credentialsCredDefId_example";
-          opts.credentialsCredDefJson = "credentialsCredDefJson_example";
+          opts.credDefId = "credDefId_example";
           opts.masterSecretId = "masterSecretId_example";
           opts.proofRequestJson = "proofRequestJson_example";
-          opts.walletHandle = 56;
+          opts.proverDID = "proverDID_example";
+          opts.proverWalletID = "proverWalletID_example";
+          opts.proverWalletKey = "proverWalletKey_example";
+          opts.schemaId = "schemaId_example";
 
           instance.proverGetProofCredentialsUsingGET(opts, function(error, data, response) {
             if (error) {

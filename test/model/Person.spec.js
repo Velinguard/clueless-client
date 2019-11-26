@@ -52,6 +52,12 @@
         // expect(instance.masterSecretId).to.be(expectedValueLiteral);
       });
 
+      it('should have the property name (base name: "name")', function() {
+        // TODO: update the code to test the property name
+        expect(instance).to.have.property('name');
+        // expect(instance.name).to.be(expectedValueLiteral);
+      });
+
       it('should have the property personDid (base name: "personDid")', function() {
         // TODO: update the code to test the property personDid
         expect(instance).to.have.property('personDid');

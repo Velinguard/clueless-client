@@ -35,6 +35,56 @@
 
   describe('(package)', function() {
     describe('ProofControllerApi', function() {
+      describe('getLicencesUsingGET', function() {
+        it('should call getLicencesUsingGET successfully', function(done) {
+          // TODO: uncomment getLicencesUsingGET call and complete the assertions
+          /*
+
+          instance.getLicencesUsingGET(function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a('string');
+              // expect(data).to.be(null);
+            }
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getProofJsonUsingGET', function() {
+        it('should call getProofJsonUsingGET successfully', function(done) {
+          // TODO: uncomment, update parameter values for getProofJsonUsingGET call and complete the assertions
+          /*
+          var opts = {};
+          opts.proof = "proof_example";
+
+          instance.getProofJsonUsingGET(opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a('string');
+            // expect(data).to.be(null);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('getProofRequestUsingGET', function() {
         it('should call getProofRequestUsingGET successfully', function(done) {
           // TODO: uncomment getProofRequestUsingGET call and complete the assertions
@@ -48,6 +98,35 @@
             // TODO: update response assertions
             expect(data).to.be.a('string');
             // expect(data).to.be(null);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getProofsUsingGET', function() {
+        it('should call getProofsUsingGET successfully', function(done) {
+          // TODO: uncomment, update parameter values for getProofsUsingGET call and complete the assertions
+          /*
+          var opts = {};
+          opts.licence = "licence_example";
+
+          instance.getProofsUsingGET(opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            let dataCtr = data;
+            expect(dataCtr).to.be.an(Array);
+            expect(dataCtr).to.not.be.empty();
+            for (let p in dataCtr) {
+              let data = dataCtr[p];
+              expect(data).to.be.a('string');
+              // expect(data).to.be(null);
+            }
 
             done();
           });

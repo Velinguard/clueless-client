@@ -35,37 +35,23 @@
 
   describe('(package)', function() {
     describe('IssuerControllerApi', function() {
-      describe('createCredentialsUsingPUT', function() {
-        it('should call createCredentialsUsingPUT successfully', function(done) {
-          // TODO: uncomment, update parameter values for createCredentialsUsingPUT call and complete the assertions
+      describe('createCredSchemaUsingPUT', function() {
+        it('should call createCredSchemaUsingPUT successfully', function(done) {
+          // TODO: uncomment, update parameter values for createCredSchemaUsingPUT call and complete the assertions
           /*
           var opts = {};
-          opts.JSON = "JSON_example";
-          opts.age = 789;
-          opts.credOffer = "credOffer_example";
-          opts.credRequestCredentialRequestJson = "credRequestCredentialRequestJson_example";
-          opts.credRequestCredentialRequestMetadataJson = "credRequestCredentialRequestMetadataJson_example";
-          opts.credentialsCredDefId = "credentialsCredDefId_example";
-          opts.credentialsCredDefJson = "credentialsCredDefJson_example";
-          opts.dateOfBirth = new Date("2013-10-20");
-          opts.licenceLevel = 56;
-          opts.masterSecretId = "masterSecretId_example";
-          opts.name = "name_example";
-          opts.walletHandle = 56;
+          opts.defaultStewardDid = "defaultStewardDid_example";
+          opts.walletId = "walletId_example";
+          opts.walletKey = "walletKey_example";
 
-          instance.createCredentialsUsingPUT(opts, function(error, data, response) {
+          instance.createCredSchemaUsingPUT(opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(ApiDocumentation.IssuerCreateCredentialResult);
-            expect(data.credentialJson).to.be.a('string');
-            expect(data.credentialJson).to.be("");
-            expect(data.revocId).to.be.a('string');
-            expect(data.revocId).to.be("");
-            expect(data.revocRegDeltaJson).to.be.a('string');
-            expect(data.revocRegDeltaJson).to.be("");
+            expect(data).to.be.a('string');
+            // expect(data).to.be(null);
 
             done();
           });
@@ -74,41 +60,145 @@
           done();
         });
       });
-      describe('getProverCredentialUsingGET', function() {
-        it('should call getProverCredentialUsingGET successfully', function(done) {
-          // TODO: uncomment, update parameter values for getProverCredentialUsingGET call and complete the assertions
+      describe('createCredentialDefinitionUsingPUT', function() {
+        it('should call createCredentialDefinitionUsingPUT successfully', function(done) {
+          // TODO: uncomment, update parameter values for createCredentialDefinitionUsingPUT call and complete the assertions
           /*
           var opts = {};
-          opts.cluelessWalletWalletId = "cluelessWalletWalletId_example";
-          opts.cluelessWalletWalletId2 = "cluelessWalletWalletId_example";
-          opts.cluelessWalletWalletKey = "cluelessWalletWalletKey_example";
-          opts.cluelessWalletWalletKey2 = "cluelessWalletWalletKey_example";
-          opts.indyWalletWalletHandle = 56;
-          opts.indyWalletWalletHandle2 = 56;
           opts.personDid = "personDid_example";
-          opts.personDid2 = "personDid_example";
+          opts.schemaId = "schemaId_example";
+          opts.walletId = "walletId_example";
+          opts.walletKey = "walletKey_example";
 
-          instance.getProverCredentialUsingGET(opts, function(error, data, response) {
+          instance.createCredentialDefinitionUsingPUT(opts, function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(ApiDocumentation.CredentialRequest);
-            expect(data.credOffer).to.be.a('string');
-            expect(data.credOffer).to.be("");
-            expect(data.credRequest).to.be.a(ApiDocumentation.ProverCreateCredentialRequestResult);
-                  expect(data.credRequest.credentialRequestJson).to.be.a('string');
-              expect(data.credRequest.credentialRequestJson).to.be("");
-              expect(data.credRequest.credentialRequestMetadataJson).to.be.a('string');
-              expect(data.credRequest.credentialRequestMetadataJson).to.be("");
-            expect(data.credentials).to.be.a(ApiDocumentation.IssuerCreateAndStoreCredentialDefResult);
-                  expect(data.credentials.credDefId).to.be.a('string');
-              expect(data.credentials.credDefId).to.be("");
-              expect(data.credentials.credDefJson).to.be.a('string');
-              expect(data.credentials.credDefJson).to.be("");
+            expect(data).to.be.a('string');
+            // expect(data).to.be(null);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('createIssuerUsingPUT', function() {
+        it('should call createIssuerUsingPUT successfully', function(done) {
+          // TODO: uncomment, update parameter values for createIssuerUsingPUT call and complete the assertions
+          /*
+          var opts = {};
+          opts.walletId = "walletId_example";
+          opts.walletKey = "walletKey_example";
+
+          instance.createIssuerUsingPUT(opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a('string');
+            // expect(data).to.be(null);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('getCredentialDefinitionUsingPUT', function() {
+        it('should call getCredentialDefinitionUsingPUT successfully', function(done) {
+          // TODO: uncomment, update parameter values for getCredentialDefinitionUsingPUT call and complete the assertions
+          /*
+          var opts = {};
+          opts.credDefId = "credDefId_example";
+          opts.indyWalletWalletHandle = 56;
+          opts.masterSecretId = "masterSecretId_example";
+          opts.name = "name_example";
+          opts.personDid = "personDid_example";
+
+          instance.getCredentialDefinitionUsingPUT(opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(ApiDocumentation.CredentialDefinition);
+            expect(data.credDefId).to.be.a('string');
+            expect(data.credDefId).to.be("");
+            expect(data.credDefJson).to.be.a('string');
+            expect(data.credDefJson).to.be("");
+            expect(data.credDefs).to.be.a('string');
+            expect(data.credDefs).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('issuerCreateCredentialsUsingPUT', function() {
+        it('should call issuerCreateCredentialsUsingPUT successfully', function(done) {
+          // TODO: uncomment, update parameter values for issuerCreateCredentialsUsingPUT call and complete the assertions
+          /*
+          var opts = {};
+          opts.credDefId = "credDefId_example";
+          opts.dateOfBirth = "dateOfBirth_example";
+          opts.issuerDid = "issuerDid_example";
+          opts.issuerWalletId = "issuerWalletId_example";
+          opts.issuerWalletKey = "issuerWalletKey_example";
+          opts.licenceLevel = "licenceLevel_example";
+          opts.name = "name_example";
+          opts.proverDid = "proverDid_example";
+          opts.proverWalletId = "proverWalletId_example";
+          opts.proverWalletKey = "proverWalletKey_example";
+
+          instance.issuerCreateCredentialsUsingPUT(opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(ApiDocumentation.EmailInfo);
             expect(data.masterSecretId).to.be.a('string');
             expect(data.masterSecretId).to.be("");
+            expect(data.personDid).to.be.a('string');
+            expect(data.personDid).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
+      describe('issuerEmailCreatedCredentialsUsingPUT', function() {
+        it('should call issuerEmailCreatedCredentialsUsingPUT successfully', function(done) {
+          // TODO: uncomment, update parameter values for issuerEmailCreatedCredentialsUsingPUT call
+          /*
+          var opts = {};
+          opts.credDefId = "credDefId_example";
+          opts.dateOfBirth = "dateOfBirth_example";
+          opts.email = "email_example";
+          opts.issuerDid = "issuerDid_example";
+          opts.issuerWalletId = "issuerWalletId_example";
+          opts.issuerWalletKey = "issuerWalletKey_example";
+          opts.licenceLevel = "licenceLevel_example";
+          opts.name = "name_example";
+          opts.proverDid = "proverDid_example";
+          opts.proverWalletId = "proverWalletId_example";
+          opts.proverWalletKey = "proverWalletKey_example";
+
+          instance.issuerEmailCreatedCredentialsUsingPUT(opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
 
             done();
           });

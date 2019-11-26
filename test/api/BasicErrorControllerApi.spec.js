@@ -35,25 +35,41 @@
 
   describe('(package)', function() {
     describe('BasicErrorControllerApi', function() {
-      describe('errorUsingDELETE', function() {
-        it('should call errorUsingDELETE successfully', function(done) {
-          // TODO: uncomment errorUsingDELETE call and complete the assertions
+      describe('errorHtmlUsingDELETE', function() {
+        it('should call errorHtmlUsingDELETE successfully', function(done) {
+          // TODO: uncomment errorHtmlUsingDELETE call and complete the assertions
           /*
 
-          instance.errorUsingDELETE(function(error, data, response) {
+          instance.errorHtmlUsingDELETE(function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Object);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(Object);
-              // expect(data).to.be(null);
+            expect(data).to.be.a(ApiDocumentation.ModelAndView);
+            expect(data.empty).to.be.a('boolean');
+            expect(data.empty).to.be(false);
+            expect(data.model).to.be.a(Object);
+            expect(data.model).to.be();
+            {
+              let dataCtr = data.modelMap;
+              expect(dataCtr).to.be.an(Object);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(Object);
+                expect(data).to.be();
+              }
             }
+            expect(data.reference).to.be.a('boolean');
+            expect(data.reference).to.be(false);
+            expect(data.status).to.be.a('string');
+            expect(data.status).to.be("100 CONTINUE");
+            expect(data.view).to.be.a(ApiDocumentation.View);
+                  expect(data.view.contentType).to.be.a('string');
+              expect(data.view.contentType).to.be("");
+            expect(data.viewName).to.be.a('string');
+            expect(data.viewName).to.be("");
 
             done();
           });
@@ -62,25 +78,41 @@
           done();
         });
       });
-      describe('errorUsingGET', function() {
-        it('should call errorUsingGET successfully', function(done) {
-          // TODO: uncomment errorUsingGET call and complete the assertions
+      describe('errorHtmlUsingGET', function() {
+        it('should call errorHtmlUsingGET successfully', function(done) {
+          // TODO: uncomment errorHtmlUsingGET call and complete the assertions
           /*
 
-          instance.errorUsingGET(function(error, data, response) {
+          instance.errorHtmlUsingGET(function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Object);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(Object);
-              // expect(data).to.be(null);
+            expect(data).to.be.a(ApiDocumentation.ModelAndView);
+            expect(data.empty).to.be.a('boolean');
+            expect(data.empty).to.be(false);
+            expect(data.model).to.be.a(Object);
+            expect(data.model).to.be();
+            {
+              let dataCtr = data.modelMap;
+              expect(dataCtr).to.be.an(Object);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(Object);
+                expect(data).to.be();
+              }
             }
+            expect(data.reference).to.be.a('boolean');
+            expect(data.reference).to.be(false);
+            expect(data.status).to.be.a('string');
+            expect(data.status).to.be("100 CONTINUE");
+            expect(data.view).to.be.a(ApiDocumentation.View);
+                  expect(data.view.contentType).to.be.a('string');
+              expect(data.view.contentType).to.be("");
+            expect(data.viewName).to.be.a('string');
+            expect(data.viewName).to.be("");
 
             done();
           });
@@ -89,25 +121,41 @@
           done();
         });
       });
-      describe('errorUsingHEAD', function() {
-        it('should call errorUsingHEAD successfully', function(done) {
-          // TODO: uncomment errorUsingHEAD call and complete the assertions
+      describe('errorHtmlUsingHEAD', function() {
+        it('should call errorHtmlUsingHEAD successfully', function(done) {
+          // TODO: uncomment errorHtmlUsingHEAD call and complete the assertions
           /*
 
-          instance.errorUsingHEAD(function(error, data, response) {
+          instance.errorHtmlUsingHEAD(function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Object);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(Object);
-              // expect(data).to.be(null);
+            expect(data).to.be.a(ApiDocumentation.ModelAndView);
+            expect(data.empty).to.be.a('boolean');
+            expect(data.empty).to.be(false);
+            expect(data.model).to.be.a(Object);
+            expect(data.model).to.be();
+            {
+              let dataCtr = data.modelMap;
+              expect(dataCtr).to.be.an(Object);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(Object);
+                expect(data).to.be();
+              }
             }
+            expect(data.reference).to.be.a('boolean');
+            expect(data.reference).to.be(false);
+            expect(data.status).to.be.a('string');
+            expect(data.status).to.be("100 CONTINUE");
+            expect(data.view).to.be.a(ApiDocumentation.View);
+                  expect(data.view.contentType).to.be.a('string');
+              expect(data.view.contentType).to.be("");
+            expect(data.viewName).to.be.a('string');
+            expect(data.viewName).to.be("");
 
             done();
           });
@@ -116,25 +164,41 @@
           done();
         });
       });
-      describe('errorUsingOPTIONS', function() {
-        it('should call errorUsingOPTIONS successfully', function(done) {
-          // TODO: uncomment errorUsingOPTIONS call and complete the assertions
+      describe('errorHtmlUsingOPTIONS', function() {
+        it('should call errorHtmlUsingOPTIONS successfully', function(done) {
+          // TODO: uncomment errorHtmlUsingOPTIONS call and complete the assertions
           /*
 
-          instance.errorUsingOPTIONS(function(error, data, response) {
+          instance.errorHtmlUsingOPTIONS(function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Object);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(Object);
-              // expect(data).to.be(null);
+            expect(data).to.be.a(ApiDocumentation.ModelAndView);
+            expect(data.empty).to.be.a('boolean');
+            expect(data.empty).to.be(false);
+            expect(data.model).to.be.a(Object);
+            expect(data.model).to.be();
+            {
+              let dataCtr = data.modelMap;
+              expect(dataCtr).to.be.an(Object);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(Object);
+                expect(data).to.be();
+              }
             }
+            expect(data.reference).to.be.a('boolean');
+            expect(data.reference).to.be(false);
+            expect(data.status).to.be.a('string');
+            expect(data.status).to.be("100 CONTINUE");
+            expect(data.view).to.be.a(ApiDocumentation.View);
+                  expect(data.view.contentType).to.be.a('string');
+              expect(data.view.contentType).to.be("");
+            expect(data.viewName).to.be.a('string');
+            expect(data.viewName).to.be("");
 
             done();
           });
@@ -143,25 +207,41 @@
           done();
         });
       });
-      describe('errorUsingPATCH', function() {
-        it('should call errorUsingPATCH successfully', function(done) {
-          // TODO: uncomment errorUsingPATCH call and complete the assertions
+      describe('errorHtmlUsingPATCH', function() {
+        it('should call errorHtmlUsingPATCH successfully', function(done) {
+          // TODO: uncomment errorHtmlUsingPATCH call and complete the assertions
           /*
 
-          instance.errorUsingPATCH(function(error, data, response) {
+          instance.errorHtmlUsingPATCH(function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Object);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(Object);
-              // expect(data).to.be(null);
+            expect(data).to.be.a(ApiDocumentation.ModelAndView);
+            expect(data.empty).to.be.a('boolean');
+            expect(data.empty).to.be(false);
+            expect(data.model).to.be.a(Object);
+            expect(data.model).to.be();
+            {
+              let dataCtr = data.modelMap;
+              expect(dataCtr).to.be.an(Object);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(Object);
+                expect(data).to.be();
+              }
             }
+            expect(data.reference).to.be.a('boolean');
+            expect(data.reference).to.be(false);
+            expect(data.status).to.be.a('string');
+            expect(data.status).to.be("100 CONTINUE");
+            expect(data.view).to.be.a(ApiDocumentation.View);
+                  expect(data.view.contentType).to.be.a('string');
+              expect(data.view.contentType).to.be("");
+            expect(data.viewName).to.be.a('string');
+            expect(data.viewName).to.be("");
 
             done();
           });
@@ -170,25 +250,41 @@
           done();
         });
       });
-      describe('errorUsingPOST', function() {
-        it('should call errorUsingPOST successfully', function(done) {
-          // TODO: uncomment errorUsingPOST call and complete the assertions
+      describe('errorHtmlUsingPOST', function() {
+        it('should call errorHtmlUsingPOST successfully', function(done) {
+          // TODO: uncomment errorHtmlUsingPOST call and complete the assertions
           /*
 
-          instance.errorUsingPOST(function(error, data, response) {
+          instance.errorHtmlUsingPOST(function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Object);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(Object);
-              // expect(data).to.be(null);
+            expect(data).to.be.a(ApiDocumentation.ModelAndView);
+            expect(data.empty).to.be.a('boolean');
+            expect(data.empty).to.be(false);
+            expect(data.model).to.be.a(Object);
+            expect(data.model).to.be();
+            {
+              let dataCtr = data.modelMap;
+              expect(dataCtr).to.be.an(Object);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(Object);
+                expect(data).to.be();
+              }
             }
+            expect(data.reference).to.be.a('boolean');
+            expect(data.reference).to.be(false);
+            expect(data.status).to.be.a('string');
+            expect(data.status).to.be("100 CONTINUE");
+            expect(data.view).to.be.a(ApiDocumentation.View);
+                  expect(data.view.contentType).to.be.a('string');
+              expect(data.view.contentType).to.be("");
+            expect(data.viewName).to.be.a('string');
+            expect(data.viewName).to.be("");
 
             done();
           });
@@ -197,25 +293,41 @@
           done();
         });
       });
-      describe('errorUsingPUT', function() {
-        it('should call errorUsingPUT successfully', function(done) {
-          // TODO: uncomment errorUsingPUT call and complete the assertions
+      describe('errorHtmlUsingPUT', function() {
+        it('should call errorHtmlUsingPUT successfully', function(done) {
+          // TODO: uncomment errorHtmlUsingPUT call and complete the assertions
           /*
 
-          instance.errorUsingPUT(function(error, data, response) {
+          instance.errorHtmlUsingPUT(function(error, data, response) {
             if (error) {
               done(error);
               return;
             }
             // TODO: update response assertions
-            let dataCtr = data;
-            expect(dataCtr).to.be.an(Object);
-            expect(dataCtr).to.not.be.empty();
-            for (let p in dataCtr) {
-              let data = dataCtr[p];
-              expect(data).to.be.a(Object);
-              // expect(data).to.be(null);
+            expect(data).to.be.a(ApiDocumentation.ModelAndView);
+            expect(data.empty).to.be.a('boolean');
+            expect(data.empty).to.be(false);
+            expect(data.model).to.be.a(Object);
+            expect(data.model).to.be();
+            {
+              let dataCtr = data.modelMap;
+              expect(dataCtr).to.be.an(Object);
+              expect(dataCtr).to.not.be.empty();
+              for (let p in dataCtr) {
+                let data = dataCtr[p];
+                expect(data).to.be.a(Object);
+                expect(data).to.be();
+              }
             }
+            expect(data.reference).to.be.a('boolean');
+            expect(data.reference).to.be(false);
+            expect(data.status).to.be.a('string');
+            expect(data.status).to.be("100 CONTINUE");
+            expect(data.view).to.be.a(ApiDocumentation.View);
+                  expect(data.view.contentType).to.be.a('string');
+              expect(data.view.contentType).to.be("");
+            expect(data.viewName).to.be.a('string');
+            expect(data.viewName).to.be("");
 
             done();
           });

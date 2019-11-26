@@ -122,6 +122,40 @@
           done();
         });
       });
+      describe('loginUsingGET', function() {
+        it('should call loginUsingGET successfully', function(done) {
+          // TODO: uncomment, update parameter values for loginUsingGET call and complete the assertions
+          /*
+          var opts = {};
+          opts.did = "did_example";
+          opts.id = "id_example";
+          opts.key = "key_example";
+          opts.masterDid = "masterDid_example";
+
+          instance.loginUsingGET(opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a(ApiDocumentation.Person);
+            expect(data.indyWallet).to.be.a(ApiDocumentation.Wallet);
+                  expect(data.indyWallet.walletHandle).to.be.a('number');
+              expect(data.indyWallet.walletHandle).to.be(0);
+            expect(data.masterSecretId).to.be.a('string');
+            expect(data.masterSecretId).to.be("");
+            expect(data.name).to.be.a('string');
+            expect(data.name).to.be("");
+            expect(data.personDid).to.be.a('string');
+            expect(data.personDid).to.be("");
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
     });
   });
 

@@ -35,20 +35,52 @@
 
   describe('(package)', function() {
     describe('VerifierControllerApi', function() {
+      describe('verifyProofFromS3UsingGET', function() {
+        it('should call verifyProofFromS3UsingGET successfully', function(done) {
+          // TODO: uncomment, update parameter values for verifyProofFromS3UsingGET call and complete the assertions
+          /*
+          var opts = {};
+          opts.bucketName = "bucketName_example";
+          opts.credDefId = "credDefId_example";
+          opts.name = "name_example";
+          opts.objectName = "objectName_example";
+          opts.schemaId = "schemaId_example";
+          opts.verifierDid = "verifierDid_example";
+          opts.verifierWalletId = "verifierWalletId_example";
+          opts.verifierWalletKey = "verifierWalletKey_example";
+
+          instance.verifyProofFromS3UsingGET(opts, function(error, data, response) {
+            if (error) {
+              done(error);
+              return;
+            }
+            // TODO: update response assertions
+            expect(data).to.be.a('boolean');
+            // expect(data).to.be(null);
+
+            done();
+          });
+          */
+          // TODO: uncomment and complete method invocation above, then delete this line and the next:
+          done();
+        });
+      });
       describe('verifyProofUsingGET', function() {
         it('should call verifyProofUsingGET successfully', function(done) {
           // TODO: uncomment, update parameter values for verifyProofUsingGET call and complete the assertions
           /*
           var opts = {};
-          opts.credOffer = "credOffer_example";
-          opts.credRequestCredentialRequestJson = "credRequestCredentialRequestJson_example";
-          opts.credRequestCredentialRequestMetadataJson = "credRequestCredentialRequestMetadataJson_example";
-          opts.credentialsCredDefId = "credentialsCredDefId_example";
-          opts.credentialsCredDefJson = "credentialsCredDefJson_example";
-          opts.masterSecretId = "masterSecretId_example";
+          opts.credDefId = "credDefId_example";
+          opts.credDefId2 = "credDefId_example";
+          opts.credDefJson = "credDefJson_example";
+          opts.credDefs = "credDefs_example";
           opts.name = "name_example";
           opts.proofJson = "proofJson_example";
           opts.proofRequestJson = "proofRequestJson_example";
+          opts.schemaId = "schemaId_example";
+          opts.verifierDid = "verifierDid_example";
+          opts.verifierWalletId = "verifierWalletId_example";
+          opts.verifierWalletKey = "verifierWalletKey_example";
 
           instance.verifyProofUsingGET(opts, function(error, data, response) {
             if (error) {
