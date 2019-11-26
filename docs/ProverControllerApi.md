@@ -21,10 +21,12 @@ var ApiDocumentation = require('api_documentation');
 var apiInstance = new ApiDocumentation.ProverControllerApi();
 
 var opts = { 
+  'credDefId': "credDefId_example", // String | credDefId
   'masterSecretId': "masterSecretId_example", // String | masterSecretId
   'proverDID': "proverDID_example", // String | proverDID
   'proverWalletID': "proverWalletID_example", // String | proverWalletID
-  'proverWalletKey': "proverWalletKey_example" // String | proverWalletKey
+  'proverWalletKey': "proverWalletKey_example", // String | proverWalletKey
+  'schemaId': "schemaId_example" // String | schemaId
 };
 
 var callback = function(error, data, response) {
@@ -41,10 +43,12 @@ apiInstance.proverGetDefaultCredentialsUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **credDefId** | **String**| credDefId | [optional] 
  **masterSecretId** | **String**| masterSecretId | [optional] 
  **proverDID** | **String**| proverDID | [optional] 
  **proverWalletID** | **String**| proverWalletID | [optional] 
  **proverWalletKey** | **String**| proverWalletKey | [optional] 
+ **schemaId** | **String**| schemaId | [optional] 
 
 ### Return type
 
@@ -72,11 +76,13 @@ var ApiDocumentation = require('api_documentation');
 var apiInstance = new ApiDocumentation.ProverControllerApi();
 
 var opts = { 
+  'credDefId': "credDefId_example", // String | credDefId
   'masterSecretId': "masterSecretId_example", // String | masterSecretId
   'proofRequestJson': "proofRequestJson_example", // String | proofRequestJson
   'proverDID': "proverDID_example", // String | proverDID
   'proverWalletID': "proverWalletID_example", // String | proverWalletID
-  'proverWalletKey': "proverWalletKey_example" // String | proverWalletKey
+  'proverWalletKey': "proverWalletKey_example", // String | proverWalletKey
+  'schemaId': "schemaId_example" // String | schemaId
 };
 
 var callback = function(error, data, response) {
@@ -93,11 +99,13 @@ apiInstance.proverGetProofCredentialsUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **credDefId** | **String**| credDefId | [optional] 
  **masterSecretId** | **String**| masterSecretId | [optional] 
  **proofRequestJson** | **String**| proofRequestJson | [optional] 
  **proverDID** | **String**| proverDID | [optional] 
  **proverWalletID** | **String**| proverWalletID | [optional] 
  **proverWalletKey** | **String**| proverWalletKey | [optional] 
+ **schemaId** | **String**| schemaId | [optional] 
 
 ### Return type
 

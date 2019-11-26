@@ -46,7 +46,7 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default http://34.244.72.181:8080
+     * @default https://34.244.72.181:8080
      */
     this.basePath = 'https://34.244.72.181:8080'.replace(/\/+$/, '');
 

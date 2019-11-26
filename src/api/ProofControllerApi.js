@@ -48,6 +48,90 @@
 
 
     /**
+     * Callback function to receive the result of the getLicencesUsingGET operation.
+     * @callback module:api/ProofControllerApi~getLicencesUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<'String'>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * getLicences
+     * @param {module:api/ProofControllerApi~getLicencesUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<'String'>}
+     */
+    this.getLicencesUsingGET = function(callback) {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['*/*'];
+      var returnType = ['String'];
+
+      return this.apiClient.callApi(
+        '/get-licence-type', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getProofJsonUsingGET operation.
+     * @callback module:api/ProofControllerApi~getProofJsonUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * getProofJson
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.proof proof
+     * @param {module:api/ProofControllerApi~getProofJsonUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'String'}
+     */
+    this.getProofJsonUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'proof': opts['proof'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['*/*'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/get-proof', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getProofRequestUsingGET operation.
      * @callback module:api/ProofControllerApi~getProofRequestUsingGETCallback
      * @param {String} error Error message, if any.
@@ -82,6 +166,50 @@
 
       return this.apiClient.callApi(
         '/get-proof-request', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getProofsUsingGET operation.
+     * @callback module:api/ProofControllerApi~getProofsUsingGETCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<'String'>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * getProofs
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.licence licence
+     * @param {module:api/ProofControllerApi~getProofsUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<'String'>}
+     */
+    this.getProofsUsingGET = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'licence': opts['licence'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['*/*'];
+      var returnType = ['String'];
+
+      return this.apiClient.callApi(
+        '/get-proofs', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
