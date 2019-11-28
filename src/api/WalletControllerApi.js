@@ -136,6 +136,52 @@
     }
 
     /**
+     * Callback function to receive the result of the createWalletWithDidUsingPUT operation.
+     * @callback module:api/WalletControllerApi~createWalletWithDidUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * createWalletWithDid
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.id id
+     * @param {String} opts.key key
+     * @param {module:api/WalletControllerApi~createWalletWithDidUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'String'}
+     */
+    this.createWalletWithDidUsingPUT = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'id': opts['id'],
+        'key': opts['key'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['*/*'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/create-wallet-with-did', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the deleteWalletUsingDELETE operation.
      * @callback module:api/WalletControllerApi~deleteWalletUsingDELETECallback
      * @param {String} error Error message, if any.

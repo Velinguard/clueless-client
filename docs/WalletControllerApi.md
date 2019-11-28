@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**closeWalletUsingDELETE**](WalletControllerApi.md#closeWalletUsingDELETE) | **DELETE** /close-wallet | closeWallet
 [**createWalletUsingPUT**](WalletControllerApi.md#createWalletUsingPUT) | **PUT** /create-wallet | createWallet
+[**createWalletWithDidUsingPUT**](WalletControllerApi.md#createWalletWithDidUsingPUT) | **PUT** /create-wallet-with-did | createWalletWithDid
 [**deleteWalletUsingDELETE**](WalletControllerApi.md#deleteWalletUsingDELETE) | **DELETE** /delete-wallet | deleteWallet
 [**getWalletUsingGET**](WalletControllerApi.md#getWalletUsingGET) | **GET** /get-wallet | getWallet
 [**loginUsingGET**](WalletControllerApi.md#loginUsingGET) | **GET** /login | login
@@ -93,6 +94,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: */*
+
+<a name="createWalletWithDidUsingPUT"></a>
+# **createWalletWithDidUsingPUT**
+> 'String' createWalletWithDidUsingPUT(opts)
+
+createWalletWithDid
+
+### Example
+```javascript
+var ApiDocumentation = require('api_documentation');
+
+var apiInstance = new ApiDocumentation.WalletControllerApi();
+
+var opts = { 
+  'id': "id_example", // String | id
+  'key': "key_example" // String | key
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.createWalletWithDidUsingPUT(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| id | [optional] 
+ **key** | **String**| key | [optional] 
+
+### Return type
+
+**'String'**
 
 ### Authorization
 

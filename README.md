@@ -104,7 +104,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.errorHtmlUsingDELETE(callback);
+api.errorUsingDELETE(callback);
 
 ```
 
@@ -114,18 +114,19 @@ All URIs are relative to *https://34.244.72.181:8080*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingDELETE**](docs/BasicErrorControllerApi.md#errorHtmlUsingDELETE) | **DELETE** /error | errorHtml
-*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingGET**](docs/BasicErrorControllerApi.md#errorHtmlUsingGET) | **GET** /error | errorHtml
-*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingHEAD**](docs/BasicErrorControllerApi.md#errorHtmlUsingHEAD) | **HEAD** /error | errorHtml
-*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingOPTIONS**](docs/BasicErrorControllerApi.md#errorHtmlUsingOPTIONS) | **OPTIONS** /error | errorHtml
-*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingPATCH**](docs/BasicErrorControllerApi.md#errorHtmlUsingPATCH) | **PATCH** /error | errorHtml
-*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingPOST**](docs/BasicErrorControllerApi.md#errorHtmlUsingPOST) | **POST** /error | errorHtml
-*ApiDocumentation.BasicErrorControllerApi* | [**errorHtmlUsingPUT**](docs/BasicErrorControllerApi.md#errorHtmlUsingPUT) | **PUT** /error | errorHtml
+*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingDELETE**](docs/BasicErrorControllerApi.md#errorUsingDELETE) | **DELETE** /error | error
+*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingGET**](docs/BasicErrorControllerApi.md#errorUsingGET) | **GET** /error | error
+*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingHEAD**](docs/BasicErrorControllerApi.md#errorUsingHEAD) | **HEAD** /error | error
+*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingOPTIONS**](docs/BasicErrorControllerApi.md#errorUsingOPTIONS) | **OPTIONS** /error | error
+*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingPATCH**](docs/BasicErrorControllerApi.md#errorUsingPATCH) | **PATCH** /error | error
+*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingPOST**](docs/BasicErrorControllerApi.md#errorUsingPOST) | **POST** /error | error
+*ApiDocumentation.BasicErrorControllerApi* | [**errorUsingPUT**](docs/BasicErrorControllerApi.md#errorUsingPUT) | **PUT** /error | error
 *ApiDocumentation.IssuerControllerApi* | [**createCredSchemaUsingPUT**](docs/IssuerControllerApi.md#createCredSchemaUsingPUT) | **PUT** /create-credential-schema | createCredSchema
 *ApiDocumentation.IssuerControllerApi* | [**createCredentialDefinitionUsingPUT**](docs/IssuerControllerApi.md#createCredentialDefinitionUsingPUT) | **PUT** /create-credential-definition | createCredentialDefinition
 *ApiDocumentation.IssuerControllerApi* | [**createIssuerUsingPUT**](docs/IssuerControllerApi.md#createIssuerUsingPUT) | **PUT** /create-issuer | createIssuer
 *ApiDocumentation.IssuerControllerApi* | [**getCredentialDefinitionUsingPUT**](docs/IssuerControllerApi.md#getCredentialDefinitionUsingPUT) | **PUT** /get-credential-definition | getCredentialDefinition
 *ApiDocumentation.IssuerControllerApi* | [**issuerCreateCredentialsUsingPUT**](docs/IssuerControllerApi.md#issuerCreateCredentialsUsingPUT) | **PUT** /create | issuerCreateCredentials
+*ApiDocumentation.IssuerControllerApi* | [**issuerEmailCreatedCredentialsUsingPUT**](docs/IssuerControllerApi.md#issuerEmailCreatedCredentialsUsingPUT) | **PUT** /create-email | issuerEmailCreatedCredentials
 *ApiDocumentation.ProofControllerApi* | [**getLicencesUsingGET**](docs/ProofControllerApi.md#getLicencesUsingGET) | **GET** /get-licence-type | getLicences
 *ApiDocumentation.ProofControllerApi* | [**getProofJsonUsingGET**](docs/ProofControllerApi.md#getProofJsonUsingGET) | **GET** /get-proof | getProofJson
 *ApiDocumentation.ProofControllerApi* | [**getProofRequestUsingGET**](docs/ProofControllerApi.md#getProofRequestUsingGET) | **GET** /get-proof-request | getProofRequest
@@ -136,6 +137,7 @@ Class | Method | HTTP request | Description
 *ApiDocumentation.VerifierControllerApi* | [**verifyProofUsingGET**](docs/VerifierControllerApi.md#verifyProofUsingGET) | **GET** /prove | verifyProof
 *ApiDocumentation.WalletControllerApi* | [**closeWalletUsingDELETE**](docs/WalletControllerApi.md#closeWalletUsingDELETE) | **DELETE** /close-wallet | closeWallet
 *ApiDocumentation.WalletControllerApi* | [**createWalletUsingPUT**](docs/WalletControllerApi.md#createWalletUsingPUT) | **PUT** /create-wallet | createWallet
+*ApiDocumentation.WalletControllerApi* | [**createWalletWithDidUsingPUT**](docs/WalletControllerApi.md#createWalletWithDidUsingPUT) | **PUT** /create-wallet-with-did | createWalletWithDid
 *ApiDocumentation.WalletControllerApi* | [**deleteWalletUsingDELETE**](docs/WalletControllerApi.md#deleteWalletUsingDELETE) | **DELETE** /delete-wallet | deleteWallet
 *ApiDocumentation.WalletControllerApi* | [**getWalletUsingGET**](docs/WalletControllerApi.md#getWalletUsingGET) | **GET** /get-wallet | getWallet
 *ApiDocumentation.WalletControllerApi* | [**loginUsingGET**](docs/WalletControllerApi.md#loginUsingGET) | **GET** /login | login
