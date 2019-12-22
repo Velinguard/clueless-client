@@ -48,198 +48,6 @@
 
 
     /**
-     * Callback function to receive the result of the createCredSchemaUsingPUT operation.
-     * @callback module:api/IssuerControllerApi~createCredSchemaUsingPUTCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * createCredSchema
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.defaultStewardDid defaultStewardDid
-     * @param {String} opts.walletId walletId
-     * @param {String} opts.walletKey walletKey
-     * @param {module:api/IssuerControllerApi~createCredSchemaUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
-     */
-    this.createCredSchemaUsingPUT = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'defaultStewardDid': opts['defaultStewardDid'],
-        'walletId': opts['walletId'],
-        'walletKey': opts['walletKey'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['*/*'];
-      var returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/create-credential-schema', 'PUT',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the createCredentialDefinitionUsingPUT operation.
-     * @callback module:api/IssuerControllerApi~createCredentialDefinitionUsingPUTCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * createCredentialDefinition
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.personDid personDid
-     * @param {String} opts.schemaId schemaId
-     * @param {String} opts.walletId walletId
-     * @param {String} opts.walletKey walletKey
-     * @param {module:api/IssuerControllerApi~createCredentialDefinitionUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
-     */
-    this.createCredentialDefinitionUsingPUT = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'personDid': opts['personDid'],
-        'schemaId': opts['schemaId'],
-        'walletId': opts['walletId'],
-        'walletKey': opts['walletKey'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['*/*'];
-      var returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/create-credential-definition', 'PUT',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the createIssuerUsingPUT operation.
-     * @callback module:api/IssuerControllerApi~createIssuerUsingPUTCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * createIssuer
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.walletId walletId
-     * @param {String} opts.walletKey walletKey
-     * @param {module:api/IssuerControllerApi~createIssuerUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
-     */
-    this.createIssuerUsingPUT = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'walletId': opts['walletId'],
-        'walletKey': opts['walletKey'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['*/*'];
-      var returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/create-issuer', 'PUT',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the createTicketCredSchemaUsingPUT operation.
-     * @callback module:api/IssuerControllerApi~createTicketCredSchemaUsingPUTCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * createTicketCredSchema
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.defaultStewardDid defaultStewardDid
-     * @param {String} opts.walletId walletId
-     * @param {String} opts.walletKey walletKey
-     * @param {module:api/IssuerControllerApi~createTicketCredSchemaUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link 'String'}
-     */
-    this.createTicketCredSchemaUsingPUT = function(opts, callback) {
-      opts = opts || {};
-      var postBody = null;
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        'defaultStewardDid': opts['defaultStewardDid'],
-        'walletId': opts['walletId'],
-        'walletKey': opts['walletKey'],
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = ['application/json'];
-      var accepts = ['*/*'];
-      var returnType = 'String';
-
-      return this.apiClient.callApi(
-        '/create-ticket-schema', 'PUT',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the getCredentialDefinitionUsingPUT operation.
      * @callback module:api/IssuerControllerApi~getCredentialDefinitionUsingPUTCallback
      * @param {String} error Error message, if any.
@@ -368,7 +176,6 @@
      * @param {String} opts.issuerDid issuerDid
      * @param {String} opts.issuerWalletId issuerWalletId
      * @param {String} opts.issuerWalletKey issuerWalletKey
-     * @param {String} opts.masterSecretId masterSecretId
      * @param {String} opts.name name
      * @param {String} opts.proverDid proverDid
      * @param {String} opts.proverWalletId proverWalletId
@@ -389,7 +196,6 @@
         'issuerDid': opts['issuerDid'],
         'issuerWalletId': opts['issuerWalletId'],
         'issuerWalletKey': opts['issuerWalletKey'],
-        'masterSecretId': opts['masterSecretId'],
         'name': opts['name'],
         'proverDid': opts['proverDid'],
         'proverWalletId': opts['proverWalletId'],
@@ -473,6 +279,67 @@
 
       return this.apiClient.callApi(
         '/create-email', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the issuerEmailCreatedTicketCredentialsUsingPUT operation.
+     * @callback module:api/IssuerControllerApi~issuerEmailCreatedTicketCredentialsUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * issuerEmailCreatedTicketCredentials
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.credDefId credDefId
+     * @param {String} opts.email email
+     * @param {String} opts.issuerDid issuerDid
+     * @param {String} opts.issuerWalletId issuerWalletId
+     * @param {String} opts.issuerWalletKey issuerWalletKey
+     * @param {String} opts.name name
+     * @param {String} opts.proverDid proverDid
+     * @param {String} opts.proverWalletId proverWalletId
+     * @param {String} opts.proverWalletKey proverWalletKey
+     * @param {String} opts.ticketLevel ticketLevel
+     * @param {module:api/IssuerControllerApi~issuerEmailCreatedTicketCredentialsUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.issuerEmailCreatedTicketCredentialsUsingPUT = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'credDefId': opts['credDefId'],
+        'email': opts['email'],
+        'issuerDid': opts['issuerDid'],
+        'issuerWalletId': opts['issuerWalletId'],
+        'issuerWalletKey': opts['issuerWalletKey'],
+        'name': opts['name'],
+        'proverDid': opts['proverDid'],
+        'proverWalletId': opts['proverWalletId'],
+        'proverWalletKey': opts['proverWalletKey'],
+        'ticketLevel': opts['ticketLevel'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['*/*'];
+      var returnType = null;
+
+      return this.apiClient.callApi(
+        '/create-email-ticket', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

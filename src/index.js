@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/CredentialDefinition', 'model/EmailInfo', 'model/ModelAndView', 'model/Person', 'model/View', 'model/Wallet', 'api/BasicErrorControllerApi', 'api/IssuerControllerApi', 'api/ProofControllerApi', 'api/ProverControllerApi', 'api/VerifierControllerApi', 'api/WalletControllerApi'], factory);
+    define(['ApiClient', 'model/CredentialDefinition', 'model/EmailInfo', 'model/ModelAndView', 'model/Person', 'model/View', 'model/Wallet', 'api/BasicErrorControllerApi', 'api/IssuerControllerApi', 'api/MasterControllerApi', 'api/ProofControllerApi', 'api/ProverControllerApi', 'api/VerifierControllerApi', 'api/WalletControllerApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/CredentialDefinition'), require('./model/EmailInfo'), require('./model/ModelAndView'), require('./model/Person'), require('./model/View'), require('./model/Wallet'), require('./api/BasicErrorControllerApi'), require('./api/IssuerControllerApi'), require('./api/ProofControllerApi'), require('./api/ProverControllerApi'), require('./api/VerifierControllerApi'), require('./api/WalletControllerApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/CredentialDefinition'), require('./model/EmailInfo'), require('./model/ModelAndView'), require('./model/Person'), require('./model/View'), require('./model/Wallet'), require('./api/BasicErrorControllerApi'), require('./api/IssuerControllerApi'), require('./api/MasterControllerApi'), require('./api/ProofControllerApi'), require('./api/ProverControllerApi'), require('./api/VerifierControllerApi'), require('./api/WalletControllerApi'));
   }
-}(function(ApiClient, CredentialDefinition, EmailInfo, ModelAndView, Person, View, Wallet, BasicErrorControllerApi, IssuerControllerApi, ProofControllerApi, ProverControllerApi, VerifierControllerApi, WalletControllerApi) {
+}(function(ApiClient, CredentialDefinition, EmailInfo, ModelAndView, Person, View, Wallet, BasicErrorControllerApi, IssuerControllerApi, MasterControllerApi, ProofControllerApi, ProverControllerApi, VerifierControllerApi, WalletControllerApi) {
   'use strict';
 
   /**
@@ -101,6 +101,11 @@
      * @property {module:api/IssuerControllerApi}
      */
     IssuerControllerApi: IssuerControllerApi,
+    /**
+     * The MasterControllerApi service constructor.
+     * @property {module:api/MasterControllerApi}
+     */
+    MasterControllerApi: MasterControllerApi,
     /**
      * The ProofControllerApi service constructor.
      * @property {module:api/ProofControllerApi}

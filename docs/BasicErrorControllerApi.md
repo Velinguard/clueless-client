@@ -4,20 +4,20 @@ All URIs are relative to *https://34.244.193.16:8080*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**errorHtmlUsingDELETE**](BasicErrorControllerApi.md#errorHtmlUsingDELETE) | **DELETE** /error | errorHtml
-[**errorHtmlUsingGET**](BasicErrorControllerApi.md#errorHtmlUsingGET) | **GET** /error | errorHtml
-[**errorHtmlUsingHEAD**](BasicErrorControllerApi.md#errorHtmlUsingHEAD) | **HEAD** /error | errorHtml
-[**errorHtmlUsingOPTIONS**](BasicErrorControllerApi.md#errorHtmlUsingOPTIONS) | **OPTIONS** /error | errorHtml
-[**errorHtmlUsingPATCH**](BasicErrorControllerApi.md#errorHtmlUsingPATCH) | **PATCH** /error | errorHtml
-[**errorHtmlUsingPOST**](BasicErrorControllerApi.md#errorHtmlUsingPOST) | **POST** /error | errorHtml
-[**errorHtmlUsingPUT**](BasicErrorControllerApi.md#errorHtmlUsingPUT) | **PUT** /error | errorHtml
+[**errorUsingDELETE**](BasicErrorControllerApi.md#errorUsingDELETE) | **DELETE** /error | error
+[**errorUsingGET**](BasicErrorControllerApi.md#errorUsingGET) | **GET** /error | error
+[**errorUsingHEAD**](BasicErrorControllerApi.md#errorUsingHEAD) | **HEAD** /error | error
+[**errorUsingOPTIONS**](BasicErrorControllerApi.md#errorUsingOPTIONS) | **OPTIONS** /error | error
+[**errorUsingPATCH**](BasicErrorControllerApi.md#errorUsingPATCH) | **PATCH** /error | error
+[**errorUsingPOST**](BasicErrorControllerApi.md#errorUsingPOST) | **POST** /error | error
+[**errorUsingPUT**](BasicErrorControllerApi.md#errorUsingPUT) | **PUT** /error | error
 
 
-<a name="errorHtmlUsingDELETE"></a>
-# **errorHtmlUsingDELETE**
-> ModelAndView errorHtmlUsingDELETE()
+<a name="errorUsingDELETE"></a>
+# **errorUsingDELETE**
+> {'String': Object} errorUsingDELETE()
 
-errorHtml
+error
 
 ### Example
 ```javascript
@@ -32,7 +32,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.errorHtmlUsingDELETE(callback);
+apiInstance.errorUsingDELETE(callback);
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ModelAndView**](ModelAndView.md)
+**{'String': Object}**
 
 ### Authorization
 
@@ -49,13 +49,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/html
+ - **Accept**: */*
 
-<a name="errorHtmlUsingGET"></a>
-# **errorHtmlUsingGET**
-> ModelAndView errorHtmlUsingGET()
+<a name="errorUsingGET"></a>
+# **errorUsingGET**
+> {'String': Object} errorUsingGET()
 
-errorHtml
+error
 
 ### Example
 ```javascript
@@ -70,7 +70,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.errorHtmlUsingGET(callback);
+apiInstance.errorUsingGET(callback);
 ```
 
 ### Parameters
@@ -78,7 +78,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ModelAndView**](ModelAndView.md)
+**{'String': Object}**
 
 ### Authorization
 
@@ -87,51 +87,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/html
+ - **Accept**: */*
 
-<a name="errorHtmlUsingHEAD"></a>
-# **errorHtmlUsingHEAD**
-> ModelAndView errorHtmlUsingHEAD()
+<a name="errorUsingHEAD"></a>
+# **errorUsingHEAD**
+> {'String': Object} errorUsingHEAD()
 
-errorHtml
-
-### Example
-```javascript
-var ApiDocumentation = require('api_documentation');
-
-var apiInstance = new ApiDocumentation.BasicErrorControllerApi();
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.errorHtmlUsingHEAD(callback);
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ModelAndView**](ModelAndView.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: text/html
-
-<a name="errorHtmlUsingOPTIONS"></a>
-# **errorHtmlUsingOPTIONS**
-> ModelAndView errorHtmlUsingOPTIONS()
-
-errorHtml
+error
 
 ### Example
 ```javascript
@@ -146,7 +108,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.errorHtmlUsingOPTIONS(callback);
+apiInstance.errorUsingHEAD(callback);
 ```
 
 ### Parameters
@@ -154,7 +116,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ModelAndView**](ModelAndView.md)
+**{'String': Object}**
 
 ### Authorization
 
@@ -163,13 +125,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/html
+ - **Accept**: */*
 
-<a name="errorHtmlUsingPATCH"></a>
-# **errorHtmlUsingPATCH**
-> ModelAndView errorHtmlUsingPATCH()
+<a name="errorUsingOPTIONS"></a>
+# **errorUsingOPTIONS**
+> {'String': Object} errorUsingOPTIONS()
 
-errorHtml
+error
 
 ### Example
 ```javascript
@@ -184,7 +146,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.errorHtmlUsingPATCH(callback);
+apiInstance.errorUsingOPTIONS(callback);
 ```
 
 ### Parameters
@@ -192,7 +154,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ModelAndView**](ModelAndView.md)
+**{'String': Object}**
 
 ### Authorization
 
@@ -201,13 +163,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/html
+ - **Accept**: */*
 
-<a name="errorHtmlUsingPOST"></a>
-# **errorHtmlUsingPOST**
-> ModelAndView errorHtmlUsingPOST()
+<a name="errorUsingPATCH"></a>
+# **errorUsingPATCH**
+> {'String': Object} errorUsingPATCH()
 
-errorHtml
+error
 
 ### Example
 ```javascript
@@ -222,7 +184,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.errorHtmlUsingPOST(callback);
+apiInstance.errorUsingPATCH(callback);
 ```
 
 ### Parameters
@@ -230,7 +192,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ModelAndView**](ModelAndView.md)
+**{'String': Object}**
 
 ### Authorization
 
@@ -239,13 +201,13 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/html
+ - **Accept**: */*
 
-<a name="errorHtmlUsingPUT"></a>
-# **errorHtmlUsingPUT**
-> ModelAndView errorHtmlUsingPUT()
+<a name="errorUsingPOST"></a>
+# **errorUsingPOST**
+> {'String': Object} errorUsingPOST()
 
-errorHtml
+error
 
 ### Example
 ```javascript
@@ -260,7 +222,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.errorHtmlUsingPUT(callback);
+apiInstance.errorUsingPOST(callback);
 ```
 
 ### Parameters
@@ -268,7 +230,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ModelAndView**](ModelAndView.md)
+**{'String': Object}**
 
 ### Authorization
 
@@ -277,5 +239,43 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: text/html
+ - **Accept**: */*
+
+<a name="errorUsingPUT"></a>
+# **errorUsingPUT**
+> {'String': Object} errorUsingPUT()
+
+error
+
+### Example
+```javascript
+var ApiDocumentation = require('api_documentation');
+
+var apiInstance = new ApiDocumentation.BasicErrorControllerApi();
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.errorUsingPUT(callback);
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**{'String': Object}**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: */*
 

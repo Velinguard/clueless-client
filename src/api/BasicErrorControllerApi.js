@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ModelAndView'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ModelAndView'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.ApiDocumentation) {
       root.ApiDocumentation = {};
     }
-    root.ApiDocumentation.BasicErrorControllerApi = factory(root.ApiDocumentation.ApiClient, root.ApiDocumentation.ModelAndView);
+    root.ApiDocumentation.BasicErrorControllerApi = factory(root.ApiDocumentation.ApiClient);
   }
-}(this, function(ApiClient, ModelAndView) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
@@ -48,19 +48,19 @@
 
 
     /**
-     * Callback function to receive the result of the errorHtmlUsingDELETE operation.
-     * @callback module:api/BasicErrorControllerApi~errorHtmlUsingDELETECallback
+     * Callback function to receive the result of the errorUsingDELETE operation.
+     * @callback module:api/BasicErrorControllerApi~errorUsingDELETECallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelAndView} data The data returned by the service call.
+     * @param {Object.<String, {'String': Object}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * errorHtml
-     * @param {module:api/BasicErrorControllerApi~errorHtmlUsingDELETECallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelAndView}
+     * error
+     * @param {module:api/BasicErrorControllerApi~errorUsingDELETECallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {'String': Object}>}
      */
-    this.errorHtmlUsingDELETE = function(callback) {
+    this.errorUsingDELETE = function(callback) {
       var postBody = null;
 
 
@@ -77,8 +77,8 @@
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = ['text/html'];
-      var returnType = ModelAndView;
+      var accepts = ['*/*'];
+      var returnType = {'String': Object};
 
       return this.apiClient.callApi(
         '/error', 'DELETE',
@@ -88,19 +88,19 @@
     }
 
     /**
-     * Callback function to receive the result of the errorHtmlUsingGET operation.
-     * @callback module:api/BasicErrorControllerApi~errorHtmlUsingGETCallback
+     * Callback function to receive the result of the errorUsingGET operation.
+     * @callback module:api/BasicErrorControllerApi~errorUsingGETCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelAndView} data The data returned by the service call.
+     * @param {Object.<String, {'String': Object}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * errorHtml
-     * @param {module:api/BasicErrorControllerApi~errorHtmlUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelAndView}
+     * error
+     * @param {module:api/BasicErrorControllerApi~errorUsingGETCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {'String': Object}>}
      */
-    this.errorHtmlUsingGET = function(callback) {
+    this.errorUsingGET = function(callback) {
       var postBody = null;
 
 
@@ -117,8 +117,8 @@
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = ['text/html'];
-      var returnType = ModelAndView;
+      var accepts = ['*/*'];
+      var returnType = {'String': Object};
 
       return this.apiClient.callApi(
         '/error', 'GET',
@@ -128,19 +128,19 @@
     }
 
     /**
-     * Callback function to receive the result of the errorHtmlUsingHEAD operation.
-     * @callback module:api/BasicErrorControllerApi~errorHtmlUsingHEADCallback
+     * Callback function to receive the result of the errorUsingHEAD operation.
+     * @callback module:api/BasicErrorControllerApi~errorUsingHEADCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelAndView} data The data returned by the service call.
+     * @param {Object.<String, {'String': Object}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * errorHtml
-     * @param {module:api/BasicErrorControllerApi~errorHtmlUsingHEADCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelAndView}
+     * error
+     * @param {module:api/BasicErrorControllerApi~errorUsingHEADCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {'String': Object}>}
      */
-    this.errorHtmlUsingHEAD = function(callback) {
+    this.errorUsingHEAD = function(callback) {
       var postBody = null;
 
 
@@ -157,8 +157,8 @@
 
       var authNames = [];
       var contentTypes = ['application/json'];
-      var accepts = ['text/html'];
-      var returnType = ModelAndView;
+      var accepts = ['*/*'];
+      var returnType = {'String': Object};
 
       return this.apiClient.callApi(
         '/error', 'HEAD',
@@ -168,19 +168,19 @@
     }
 
     /**
-     * Callback function to receive the result of the errorHtmlUsingOPTIONS operation.
-     * @callback module:api/BasicErrorControllerApi~errorHtmlUsingOPTIONSCallback
+     * Callback function to receive the result of the errorUsingOPTIONS operation.
+     * @callback module:api/BasicErrorControllerApi~errorUsingOPTIONSCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelAndView} data The data returned by the service call.
+     * @param {Object.<String, {'String': Object}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * errorHtml
-     * @param {module:api/BasicErrorControllerApi~errorHtmlUsingOPTIONSCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelAndView}
+     * error
+     * @param {module:api/BasicErrorControllerApi~errorUsingOPTIONSCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {'String': Object}>}
      */
-    this.errorHtmlUsingOPTIONS = function(callback) {
+    this.errorUsingOPTIONS = function(callback) {
       var postBody = null;
 
 
@@ -197,8 +197,8 @@
 
       var authNames = [];
       var contentTypes = ['application/json'];
-      var accepts = ['text/html'];
-      var returnType = ModelAndView;
+      var accepts = ['*/*'];
+      var returnType = {'String': Object};
 
       return this.apiClient.callApi(
         '/error', 'OPTIONS',
@@ -208,19 +208,19 @@
     }
 
     /**
-     * Callback function to receive the result of the errorHtmlUsingPATCH operation.
-     * @callback module:api/BasicErrorControllerApi~errorHtmlUsingPATCHCallback
+     * Callback function to receive the result of the errorUsingPATCH operation.
+     * @callback module:api/BasicErrorControllerApi~errorUsingPATCHCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelAndView} data The data returned by the service call.
+     * @param {Object.<String, {'String': Object}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * errorHtml
-     * @param {module:api/BasicErrorControllerApi~errorHtmlUsingPATCHCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelAndView}
+     * error
+     * @param {module:api/BasicErrorControllerApi~errorUsingPATCHCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {'String': Object}>}
      */
-    this.errorHtmlUsingPATCH = function(callback) {
+    this.errorUsingPATCH = function(callback) {
       var postBody = null;
 
 
@@ -237,8 +237,8 @@
 
       var authNames = [];
       var contentTypes = ['application/json'];
-      var accepts = ['text/html'];
-      var returnType = ModelAndView;
+      var accepts = ['*/*'];
+      var returnType = {'String': Object};
 
       return this.apiClient.callApi(
         '/error', 'PATCH',
@@ -248,19 +248,19 @@
     }
 
     /**
-     * Callback function to receive the result of the errorHtmlUsingPOST operation.
-     * @callback module:api/BasicErrorControllerApi~errorHtmlUsingPOSTCallback
+     * Callback function to receive the result of the errorUsingPOST operation.
+     * @callback module:api/BasicErrorControllerApi~errorUsingPOSTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelAndView} data The data returned by the service call.
+     * @param {Object.<String, {'String': Object}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * errorHtml
-     * @param {module:api/BasicErrorControllerApi~errorHtmlUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelAndView}
+     * error
+     * @param {module:api/BasicErrorControllerApi~errorUsingPOSTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {'String': Object}>}
      */
-    this.errorHtmlUsingPOST = function(callback) {
+    this.errorUsingPOST = function(callback) {
       var postBody = null;
 
 
@@ -277,8 +277,8 @@
 
       var authNames = [];
       var contentTypes = ['application/json'];
-      var accepts = ['text/html'];
-      var returnType = ModelAndView;
+      var accepts = ['*/*'];
+      var returnType = {'String': Object};
 
       return this.apiClient.callApi(
         '/error', 'POST',
@@ -288,19 +288,19 @@
     }
 
     /**
-     * Callback function to receive the result of the errorHtmlUsingPUT operation.
-     * @callback module:api/BasicErrorControllerApi~errorHtmlUsingPUTCallback
+     * Callback function to receive the result of the errorUsingPUT operation.
+     * @callback module:api/BasicErrorControllerApi~errorUsingPUTCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ModelAndView} data The data returned by the service call.
+     * @param {Object.<String, {'String': Object}>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * errorHtml
-     * @param {module:api/BasicErrorControllerApi~errorHtmlUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ModelAndView}
+     * error
+     * @param {module:api/BasicErrorControllerApi~errorUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object.<String, {'String': Object}>}
      */
-    this.errorHtmlUsingPUT = function(callback) {
+    this.errorUsingPUT = function(callback) {
       var postBody = null;
 
 
@@ -317,8 +317,8 @@
 
       var authNames = [];
       var contentTypes = ['application/json'];
-      var accepts = ['text/html'];
-      var returnType = ModelAndView;
+      var accepts = ['*/*'];
+      var returnType = {'String': Object};
 
       return this.apiClient.callApi(
         '/error', 'PUT',

@@ -3,18 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="85bad189-be9b-4bc5-8fb2-6da635305ad6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/BasicErrorControllerApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/BasicErrorControllerApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/IssuerControllerApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/IssuerControllerApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ProofControllerApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ProofControllerApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ProverControllerApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ProverControllerApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/VerifierControllerApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/VerifierControllerApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/WalletControllerApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/WalletControllerApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ApiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/BasicErrorControllerApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/BasicErrorControllerApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/IssuerControllerApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/IssuerControllerApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/ProverControllerApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ProverControllerApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/VerifierControllerApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/VerifierControllerApi.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +72,7 @@
       <workItem from="1576778524532" duration="238000" />
       <workItem from="1577027643746" duration="9000" />
       <workItem from="1577032824277" duration="53000" />
-      <workItem from="1577032968076" duration="10000" />
+      <workItem from="1577032968076" duration="625000" />
     </task>
     <servers />
   </component>
