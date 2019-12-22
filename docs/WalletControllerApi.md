@@ -1,6 +1,6 @@
 # ApiDocumentation.WalletControllerApi
 
-All URIs are relative to *https://34.244.72.181:8080*
+All URIs are relative to *https://34.244.193.16:8080*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

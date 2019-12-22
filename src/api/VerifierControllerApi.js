@@ -59,10 +59,9 @@
      * verifyProofFromS3
      * @param {Object} opts Optional parameters
      * @param {String} opts.bucketName bucketName
-     * @param {String} opts.credDefId credDefId
      * @param {String} opts.name name
      * @param {String} opts.objectName objectName
-     * @param {String} opts.schemaId schemaId
+     * @param {String} opts.proof proof
      * @param {String} opts.verifierDid verifierDid
      * @param {String} opts.verifierWalletId verifierWalletId
      * @param {String} opts.verifierWalletKey verifierWalletKey
@@ -78,10 +77,9 @@
       };
       var queryParams = {
         'bucketName': opts['bucketName'],
-        'credDefId': opts['credDefId'],
         'name': opts['name'],
         'objectName': opts['objectName'],
-        'schemaId': opts['schemaId'],
+        'proof': opts['proof'],
         'verifierDid': opts['verifierDid'],
         'verifierWalletId': opts['verifierWalletId'],
         'verifierWalletKey': opts['verifierWalletKey'],

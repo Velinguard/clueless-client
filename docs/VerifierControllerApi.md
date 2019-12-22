@@ -1,6 +1,6 @@
 # ApiDocumentation.VerifierControllerApi
 
-All URIs are relative to *https://34.244.72.181:8080*
+All URIs are relative to *https://34.244.193.16:8080*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,10 +22,9 @@ var apiInstance = new ApiDocumentation.VerifierControllerApi();
 
 var opts = { 
   'bucketName': "bucketName_example", // String | bucketName
-  'credDefId': "credDefId_example", // String | credDefId
   'name': "name_example", // String | name
   'objectName': "objectName_example", // String | objectName
-  'schemaId': "schemaId_example", // String | schemaId
+  'proof': "proof_example", // String | proof
   'verifierDid': "verifierDid_example", // String | verifierDid
   'verifierWalletId': "verifierWalletId_example", // String | verifierWalletId
   'verifierWalletKey': "verifierWalletKey_example" // String | verifierWalletKey
@@ -46,10 +45,9 @@ apiInstance.verifyProofFromS3UsingGET(opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **bucketName** | **String**| bucketName | [optional] 
- **credDefId** | **String**| credDefId | [optional] 
  **name** | **String**| name | [optional] 
  **objectName** | **String**| objectName | [optional] 
- **schemaId** | **String**| schemaId | [optional] 
+ **proof** | **String**| proof | [optional] 
  **verifierDid** | **String**| verifierDid | [optional] 
  **verifierWalletId** | **String**| verifierWalletId | [optional] 
  **verifierWalletKey** | **String**| verifierWalletKey | [optional] 

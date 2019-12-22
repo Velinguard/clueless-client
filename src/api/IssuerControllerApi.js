@@ -192,6 +192,54 @@
     }
 
     /**
+     * Callback function to receive the result of the createTicketCredSchemaUsingPUT operation.
+     * @callback module:api/IssuerControllerApi~createTicketCredSchemaUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param {'String'} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * createTicketCredSchema
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.defaultStewardDid defaultStewardDid
+     * @param {String} opts.walletId walletId
+     * @param {String} opts.walletKey walletKey
+     * @param {module:api/IssuerControllerApi~createTicketCredSchemaUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link 'String'}
+     */
+    this.createTicketCredSchemaUsingPUT = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'defaultStewardDid': opts['defaultStewardDid'],
+        'walletId': opts['walletId'],
+        'walletKey': opts['walletKey'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['*/*'];
+      var returnType = 'String';
+
+      return this.apiClient.callApi(
+        '/create-ticket-schema', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getCredentialDefinitionUsingPUT operation.
      * @callback module:api/IssuerControllerApi~getCredentialDefinitionUsingPUTCallback
      * @param {String} error Error message, if any.
@@ -300,6 +348,68 @@
 
       return this.apiClient.callApi(
         '/create', 'PUT',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the issuerCreateTicketCredentialsUsingPUT operation.
+     * @callback module:api/IssuerControllerApi~issuerCreateTicketCredentialsUsingPUTCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/EmailInfo} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * issuerCreateTicketCredentials
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.credDefId credDefId
+     * @param {String} opts.issuerDid issuerDid
+     * @param {String} opts.issuerWalletId issuerWalletId
+     * @param {String} opts.issuerWalletKey issuerWalletKey
+     * @param {String} opts.masterSecretId masterSecretId
+     * @param {String} opts.name name
+     * @param {String} opts.proverDid proverDid
+     * @param {String} opts.proverWalletId proverWalletId
+     * @param {String} opts.proverWalletKey proverWalletKey
+     * @param {String} opts.ticketLevel ticketLevel
+     * @param {module:api/IssuerControllerApi~issuerCreateTicketCredentialsUsingPUTCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EmailInfo}
+     */
+    this.issuerCreateTicketCredentialsUsingPUT = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'credDefId': opts['credDefId'],
+        'issuerDid': opts['issuerDid'],
+        'issuerWalletId': opts['issuerWalletId'],
+        'issuerWalletKey': opts['issuerWalletKey'],
+        'masterSecretId': opts['masterSecretId'],
+        'name': opts['name'],
+        'proverDid': opts['proverDid'],
+        'proverWalletId': opts['proverWalletId'],
+        'proverWalletKey': opts['proverWalletKey'],
+        'ticketLevel': opts['ticketLevel'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['*/*'];
+      var returnType = EmailInfo;
+
+      return this.apiClient.callApi(
+        '/create-ticket', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

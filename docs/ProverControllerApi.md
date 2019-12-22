@@ -1,6 +1,6 @@
 # ApiDocumentation.ProverControllerApi
 
-All URIs are relative to *https://34.244.72.181:8080*
+All URIs are relative to *https://34.244.193.16:8080*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,12 +21,11 @@ var ApiDocumentation = require('api_documentation');
 var apiInstance = new ApiDocumentation.ProverControllerApi();
 
 var opts = { 
-  'credDefId': "credDefId_example", // String | credDefId
   'masterSecretId': "masterSecretId_example", // String | masterSecretId
+  'proof': "proof_example", // String | proof
   'proverDID': "proverDID_example", // String | proverDID
   'proverWalletID': "proverWalletID_example", // String | proverWalletID
-  'proverWalletKey': "proverWalletKey_example", // String | proverWalletKey
-  'schemaId': "schemaId_example" // String | schemaId
+  'proverWalletKey': "proverWalletKey_example" // String | proverWalletKey
 };
 
 var callback = function(error, data, response) {
@@ -43,12 +42,11 @@ apiInstance.proverGetDefaultCredentialsUsingGET(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **credDefId** | **String**| credDefId | [optional] 
  **masterSecretId** | **String**| masterSecretId | [optional] 
+ **proof** | **String**| proof | [optional] 
  **proverDID** | **String**| proverDID | [optional] 
  **proverWalletID** | **String**| proverWalletID | [optional] 
  **proverWalletKey** | **String**| proverWalletKey | [optional] 
- **schemaId** | **String**| schemaId | [optional] 
 
 ### Return type
 
